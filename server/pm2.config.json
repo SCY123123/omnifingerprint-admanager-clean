@@ -1,0 +1,14 @@
+{
+  "apps": [
+    {
+      "name": "admanager-storage",
+      "script": "/opt/omnifingerprint-admanager/server/storage-api-server.js",
+      "cwd": "/opt/omnifingerprint-admanager/server",
+      "env": {
+        "STORAGE_PORT": "7070"
+      },
+      "instances": 1,
+      "autorestart": true
+    }
+  ]
+}

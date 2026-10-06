@@ -1,0 +1,17 @@
+{
+  "apps": [
+    {
+      "name": "admanager-puppeteer",
+      "script": "/opt/omnifingerprint-admanager/server/puppeteer-api-server.js",
+      "cwd": "/opt/omnifingerprint-admanager/server",
+      "env": {
+        "PUPPETEER_PORT": "9999",
+        "LOG_LEVEL": "DEBUG",
+        "QUIET_LOGS": "false",
+        "AUTO_CLICK_VERIFY": "true"
+      },
+      "instances": 1,
+      "autorestart": true
+    }
+  ]
+}

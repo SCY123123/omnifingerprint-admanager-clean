@@ -1,0 +1,17 @@
+{
+  "name": "baota-backend",
+  "version": "1.0.0",
+  "description": "OmniFingerprint 宝塔版后端：Cloudflare Pages Functions 同构移植到 Node + MySQL",
+  "type": "module",
+  "main": "src/index.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "mysql2": "^3.11.0"
+  }
+}

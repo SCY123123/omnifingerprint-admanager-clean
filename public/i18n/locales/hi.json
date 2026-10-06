@@ -1,0 +1,273 @@
+
+{
+  "sidebar": {
+    "dashboard": "डैशबोर्ड",
+    "automation": "विज्ञापन स्वचालन",
+    "proxyNav": "प्रॉक्सी नेविगेशन",
+    "payment": "भुगतान",
+    "settings": "सेटिंग्स",
+    "signOut": "साइन आउट",
+    "platforms": "प्लेटफ़ॉर्म",
+    "cloudflare": "Cloudflare",
+    "meta": {
+      "profiles": "प्रोफाइल",
+      "pages": "पेज",
+      "bms": "बिजनेस मैनेजर",
+      "adAccounts": "विज्ञापन खाते"
+    }
+  },
+  "proxyNav": {
+    "title": "प्रॉक्सी नेविगेशन",
+    "subtitle": "वर्तमान लक्ष्य देखें और डेवलपमेंट प्रॉक्सी से कनेक्टिविटी जाँचें",
+    "currentTarget": "वर्तमान लक्ष्य",
+    "test": "कनेक्टिविटी जाँचें",
+    "statusOnline": "ऑनलाइन",
+    "statusOffline": "ऑफ़लाइन",
+    "statusUnknown": "अज्ञात",
+    "help": ".env में NAV_PROXY_TARGET सेट करें"
+  },
+  "cloudflare": {
+    "main": { "title": "Cloudflare", "subtitle": "Cloudflare खातों का प्रबंधन और API परीक्षण", "openConsole": "कंसोल खोलें" },
+    "add": { "panelTitle": "क्रेडेंशियल जोड़ें", "labels": { "username": "उपयोगकर्ता नाम", "email": "ईमेल", "password": "पासवर्ड", "apiKey": "API Key" }, "actions": { "save": "सहेजें" }, "validationEnterUsernameOrEmail": "उपयोगकर्ता नाम या ईमेल दर्ज करें" },
+    "list": { "panelTitle": "खाता सूची", "actions": { "refresh": "रिफ्रेश", "testApi": "API परीक्षण" }, "empty": "Cloudflare खाते नहीं हैं", "table": { "name": "नाम", "email": "ईमेल", "apiKey": "API Key", "actions": "क्रियाएँ" }, "status": { "tokenSet": "कॉन्फ़िगर्ड" } },
+    "zones": { "title": "Zones", "accountPrefix": "खाता", "empty": "Zones नहीं" }
+  },
+  "dashboard": {
+    "title": "अवलोकन",
+    "subtitle": "वास्तविक समय प्रणाली मेट्रिक्स और विज्ञापन प्रदर्शन।",
+    "totalProfiles": "कुल प्रोफाइल",
+    "activeSpend": "सक्रिय विज्ञापन खर्च",
+    "activeCampaigns": "सक्रिय अभियान",
+    "avgROI": "औसत ROI",
+    "fromLastMonth": "पिछले महीने से",
+    "trafficSpendTrends": "यातायात और खर्च के रुझान",
+    "conversionBreakdown": "रूपांतरण विश्लेषण"
+  },
+  "status": {
+    "active": "सक्रिय",
+    "restricted": "प्रतिबंधित",
+    "disabled": "अक्षम",
+    "review": "समीक्षा में",
+    "unknown": "अज्ञात",
+    "payment": {
+      "active": "सक्रिय",
+      "failed": "विफल",
+      "none": "कोई नहीं"
+    }
+  },
+  "profileManager": {
+    "title": "ब्राउज़र प्रोफाइल",
+    "subtitle": "बहु-खाता संचालन के लिए अद्वितीय डिजिटल फिंगरप्रिंट प्रबंधित करें।",
+    "import": "आयात करें",
+    "export": "एक्सेल निर्यात करें",
+    "newProfile": "नई प्रोफाइल",
+    "importSuccess": "{{count}} प्रोफाइल सफलतापूर्वक आयात किए गए।",
+    "searchPlaceholder": "नाम या आईडी द्वारा प्रोफाइल खोजें...",
+    "all": "सभी",
+    "table": {
+      "id": "क्र.सं.",
+      "name": "प्रोफाइल का नाम",
+      "platform": "प्लेटफार्म",
+      "accountStatus": "खाता स्वास्थ्य",
+      "status": "स्थिति",
+      "actions": "कार्रवाइयां",
+      "account": "खाता",
+      "email": "ईमेल",
+      "password": "पासवर्ड",
+      "twofa": "2FA",
+      "notes": "नोट्स",
+      "country": "देश",
+      "bmId": "बीएम आईडी",
+      "pages": "पेज",
+      "adAccounts": "विज्ञापन खाते",
+      "payment": "भुगतान"
+    },
+    "actions": {
+      "launch": "ब्राउज़र लॉन्च करें",
+      "launchLocal": "स्थानीय ब्राउज़र इंस्टेंस लॉन्च करें",
+      "stop": "ब्राउज़र रोकें",
+      "edit": "प्रोफ़ाइल संपादित करें"
+    },
+    "batch": {
+      "selected": "चयनित",
+      "launch": "लॉन्च करें",
+      "stop": "रोकें",
+      "checkStatus": "स्थिति जांचें",
+      "delete": "हटाएं",
+      "deleteConfirm": "क्या आप वाकई {{count}} प्रोफाइल हटाना चाहते हैं?",
+      "checkComplete": "चयनित प्रोफाइल के लिए स्थिति जांच पूरी हुई।",
+      "moreActions": "और क्रियाएं",
+      "relogin": "पुनः लॉगिन करें",
+      "getInfo": "जानकारी प्राप्त करें",
+      "createPage": "पेज बनाएं",
+      "createBM": "बीएम बनाएं",
+      "createAdAccount": "विज्ञापन खाता बनाएं",
+      "changeCurrencyTimezone": "मुद्रा/समयक्षेत्र बदलें",
+      "addPayment": "भुगतान जोड़ें",
+      "topUp": "टॉप अप",
+      "actionInitiated": "{{count}} प्रोफाइल के लिए '{{action}}' शुरू किया गया।",
+      "getInfoComplete": "{{count}} प्रोफाइल के लिए जानकारी सफलतापूर्वक अपडेट की गई।"
+    }
+  },
+  "adAutomation": {
+    "title": "विज्ञापन स्वचालन",
+    "subtitle": "जेमिनी के साथ उच्च-परिवर्तित कॉपी उत्पन्न करें और आधिकारिक एपीआई पर प्रकाशित करें।",
+    "generationError": "टेक्स्ट बनाने में त्रुटि। कृपया कंसोल/एपीआई कुंजी जांचें।",
+    "labels": {
+      "platform": "लक्ष्य प्लेटफार्म",
+      "productName": "उत्पाद का नाम",
+      "productDetails": "उत्पाद विवरण / यूएसपी",
+      "tone": "आवाज का लहजा"
+    },
+    "placeholders": {
+      "productName": "उदा., अल्ट्राकम्फर्ट स्नीकर्स",
+      "productDetails": "मुख्य विशेषताएं, लक्षित दर्शक और लाभों का वर्णन करें..."
+    },
+    "tones": {
+      "PersuasiveandUrgent": "प्रेरक और तत्काल",
+      "FriendlyandCasual": "मैत्रीपूर्ण और अनौपचारिक",
+      "ProfessionalandAuthoritative": "पेशेवर और आधिकारिक",
+      "LuxuryandElegant": "शानदार और सुरुचिपूर्ण",
+      "ViralGen-ZStyle": "वायरल / जेन-जेड स्टाइल"
+    },
+    "generateButton": "विज्ञापन सामग्री उत्पन्न करें",
+    "previewTitle": "उत्पन्न सामग्री का पूर्वावलोकन",
+    "previewPlaceholder": "सामग्री यहां दिखाई देगी...",
+    "accountLabel": "खाता",
+    "publishButton": "एपीआई पर प्रकाशित करें",
+    "publishSuccess": "अभियान {{platform}} एपीआई पर सफलतापूर्वक प्रकाशित हुआ।",
+    "publishError": "एपीआई त्रुटि: अमान्य बजट या लक्ष्यीकरण विन्यास।"
+  },
+  "settings": {
+    "unavailable": {
+      "title": "सेटिंग्स अनुपलब्ध",
+      "description": "एपीआई कॉन्फ़िगरेशन और सिस्टम प्राथमिकताएं जल्द ही आ रही हैं।"
+    }
+  },
+  "profileCreator": {
+    "title": "नई प्रोफाइल बनाएं",
+    "subtitle": "अपने संचालन के लिए एक अद्वितीय ब्राउज़र वातावरण कॉन्फिगर करें।",
+    "editTitle": "प्रोफ़ाइल संपादित करें",
+    "editSubtitle": "इस ब्राउज़र वातावरण के लिए कॉन्फ़िगरेशन अपडेट करें।",
+    "backButton": "प्रोफाइल पर वापस",
+    "createButton": "प्रोफाइल बनाएं",
+    "saveButton": "बदलाव सहेजें",
+    "cancelButton": "रद्द करें",
+    "currentUser": "वर्तमान उपयोगकर्ता",
+    "random": "यादृच्छिक",
+    "sections": {
+      "basic": {
+        "title": "बुनियादी जानकारी",
+        "batchCount": {
+          "label": "बैच निर्माण संख्या",
+          "helper": "एक बार में 100 प्रोफाइल तक बनाए जा सकते हैं।"
+        },
+        "profileName": {
+          "label": "प्रोफाइल का नाम",
+          "placeholder": "प्रोफाइल का नाम दर्ज करें",
+          "helper": "आईडी और नाम प्रत्यय स्वचालित रूप से निर्दिष्ट किए जाएंगे।"
+        }
+      },
+      "grouping": {
+        "title": "समूहीकरण और टैग",
+        "group": { "label": "समूह", "helper": "संगठन के लिए एक नए या मौजूदा समूह को सौंपें।" },
+        "tags": { "label": "टैग", "helper": "उदा., facebook, ads, test (अल्पविराम से अलग)।" },
+        "owner": { "label": "मालिक", "helper": "डिफ़ॉल्ट वर्तमान उपयोगकर्ता है; व्यवस्थापक इसे बदल सकते हैं।" }
+      },
+      "fingerprint": {
+        "title": "ब्राउज़र फिंगरप्रिंट",
+        "os": { "label": "ऑपरेटिंग सिस्टम" },
+        "userAgent": { "label": "उपयोगकर्ता एजेंट", "helper": "चयनित ओएस के आधार पर एक यादृच्छिक यूए उत्पन्न होता है।" },
+        "resolution": { "label": "स्क्रीन रिज़ॉल्यूशन" },
+        "timezone": { "label": "समय क्षेत्र" },
+        "language": { "label": "भाषा" }
+      },
+      "protection": {
+        "title": "फिंगरप्रिंट सुरक्षा",
+        "canvas": "कैनवास फिंगरप्रिंट",
+        "webgl": "वेबजीएल फिंगरप्रिंट",
+        "audio": "ऑडियो फिंगरप्रिंट"
+      },
+      "proxy": {
+        "title": "प्रॉक्सी सेटिंग्स",
+        "enable": "प्रॉक्सी सक्षम करें",
+        "type": { "label": "प्रॉक्सी प्रकार" },
+        "host": { "label": "होस्ट", "helper": "आप यहां पूरी प्रॉक्सी स्ट्रिंग पेस्ट कर सकते हैं (उदाहरण के लिए, host:port:user:pass)।" },
+        "port": { "label": "पोर्ट" },
+        "username": { "label": "उपयोगकर्ता नाम (वैकल्पिक)" },
+        "password": { "label": "पासवर्ड (वैकल्पिक)" }
+      },
+      "startup": {
+        "title": "स्टार्टअप वेबसाइटें",
+        "custom": { "label": "कस्टम वेबसाइट यूआरएल", "helper": "प्रति पंक्ति एक यूआरएल।" }
+      },
+      "account": {
+        "title": "खाता जानकारी",
+        "name": { "label": "खाता नाम", "helper": "लॉगिन के लिए उपयोगकर्ता नाम।" },
+        "email": { "label": "ईमेल पता" },
+        "password": { "label": "खाता पासवर्ड" },
+        "twoFactor": { "label": "2FA रहस्य", "helper": "TOTP कुंजी या बैकअप कोड।" },
+        "cookies": { "label": "कुकी डेटा", "helper": "JSON या नेटस्केप प्रारूप में कुकीज़ पेस्ट करें।" }
+      },
+      "notes": {
+        "title": "टिप्पणियाँ",
+        "remarks": { "label": "टिप्पणी", "placeholder": "अन्य महत्वपूर्ण जानकारी या नोट्स रिकॉर्ड करें..." }
+      }
+    }
+  },
+  "assetViewer": {
+    "titlePages": "मेटा पेज",
+    "subtitlePages": "अपने सभी प्रोफाइल में फेसबुक पेज देखें और प्रबंधित करें।",
+    "titleBMs": "मेटा बिजनेस मैनेजर",
+    "subtitleBMs": "सभी बिजनेस मैनेजर खातों और उनकी स्थिति का अवलोकन।",
+    "titleAdAccounts": "मेटा विज्ञापन खाते",
+    "subtitleAdAccounts": "अपने प्रोफाइल से जुड़े सभी विज्ञापन खातों की निगरानी करें।",
+    "noAssets": "आपके प्रोफाइल में इस प्रकार की कोई संपत्ति नहीं मिली।",
+    "table": {
+        "id": "क्र.सं.",
+        "profileName": "प्रोफाइल नाम",
+        "pageName": "पेज का नाम",
+        "pageId": "पेज आईडी",
+        "pageLikes": "लाइक",
+        "pageStatus": "स्थिति",
+        "bmId": "बीएम आईडी",
+        "bmStatus": "बीएम स्थिति",
+        "payment": "भुगतान",
+        "adAccountId": "विज्ञापन खाता आईडी",
+        "adAccountStatus": "स्थिति",
+        "adAccountSpend": "खर्च (USD)"
+    },
+    "status": {
+        "published": "प्रकाशित",
+        "unpublished": "अप्रकाशित",
+        "active": "सक्रिय",
+        "restricted": "प्रतिबंधित",
+        "ban": "प्रतिबंधित",
+        "inReview": "समीक्षा में",
+        "disabled": "अक्षम",
+        "verified": "सत्यापित",
+        "notVerified": "सत्यापित नहीं"
+    },
+    "batch": {
+      "selected": "चयनित",
+      "delete": "हटाएं",
+      "deleteConfirm": "क्या आप वाकई {{count}} चयनित संपत्तियां हटाना चाहते हैं?",
+      "publish": "प्रकाशित करें",
+      "unpublish": "अप्रकाशित करें",
+      "checkStatus": "स्थिति जांचें",
+      "addPayment": "भुगतान जोड़ें",
+      "enable": "सक्षम करें",
+      "disable": "अक्षम करें",
+      "checkSpend": "खर्च जांचें",
+      "actionInitiated": "{{count}} संपत्तियों के लिए '{{action}}' शुरू किया गया।"
+    }
+  }
+  ,
+  "analytics": {
+    "title": "नेविगेशन विश्लेषण",
+    "empty": "कोई डेटा नहीं",
+    "error": "लोड विफल",
+    "table": { "time": "समय", "event": "इवेंट", "from": "से", "to": "तक", "locale": "भाषा" }
+  },
+  "common": { "refresh": "रिफ्रेश", "loading": "लोड हो रहा है..." }
+}

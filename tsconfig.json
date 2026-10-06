@@ -1,0 +1,56 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "experimentalDecorators": true,
+    "useDefineForClassFields": false,
+    "module": "ESNext",
+    "lib": [
+      "ES2022",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "allowJs": true,
+    "jsx": "react-jsx",
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "types": ["node", "vite/client"],
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    },
+    "allowImportingTsExtensions": true,
+    "noEmit": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "hooks/**/*.ts",
+    "hooks/**/*.tsx",
+    "utils/**/*.ts",
+    "utils/**/*.tsx",
+    "types/**/*.ts",
+    "App.tsx",
+    "index.tsx",
+    "**/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "browser-profiles",
+    ".profiles",
+    "pup-server-portable",
+    "dist-pup",
+    "server",
+    "scripts",
+    "ops",
+    "ssh-keys",
+    "dist",
+    "**/.git/**"
+  ]
+}

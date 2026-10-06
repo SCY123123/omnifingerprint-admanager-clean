@@ -1,0 +1,53 @@
+{
+  "name": "omnifingerprint-admanager",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Self-hosted fingerprint-browser profile manager and multi-platform ad automation workbench (React frontend + local Puppeteer PUP server + Node/MySQL cloud backend)",
+  "license": "GPL-3.0-or-later",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --config vite.config.mjs",
+    "build": "vite build --config vite.config.mjs && powershell -Command \"$f='dist/index.html';$c=(Get-Content $f -Raw)-replace 'BUILD_TIMESTAMP',[DateTimeOffset]::Now.ToUnixTimeSeconds();[IO.File]::WriteAllText($f,$c)\"",
+    "build:debug": "set DEBUG=vite:transform && vite build --config vite.config.mjs",
+    "deploy": "npm run build && npx wrangler pages deploy dist --project-name omnifingerprint-admanager",
+    "deploy:bt": "npm run build && powershell -ExecutionPolicy Bypass -File scripts/deploy-bt.ps1",
+    "deploy:full": "npm run deploy && cd email-worker && npx wrangler deploy",
+    "preview": "vite preview",
+    "server": "node server/index.js",
+    "launch:puppeteer": "set LOG_LEVEL=DEBUG&& set QUIET_LOGS=false&& set AUTO_CLICK_VERIFY=true&& set PUPPETEER_PORT=9999&& set BORROWED_IDLE_MS=180000&& node server/puppeteer-api-server.js",
+    "launch:puppeteer:force": "set LOG_LEVEL=DEBUG&& set QUIET_LOGS=false&& set AUTO_CLICK_VERIFY=true&& set AUTO_CLICK_VERIFY_FORCE=true&& set PUPPETEER_PORT=9999&& set BORROWED_IDLE_MS=180000&& node server/puppeteer-api-server.js",
+    "launch:playwright": "set LOG_LEVEL=DEBUG&& set QUIET_LOGS=false&& set AUTO_CLICK_VERIFY=true&& set PLAYWRIGHT_PORT=9999&& node server/playwright-api-server.js",
+    "launch:playwright:force": "set LOG_LEVEL=DEBUG&& set QUIET_LOGS=false&& set AUTO_CLICK_VERIFY=true&& set AUTO_CLICK_VERIFY_FORCE=true&& set PLAYWRIGHT_PORT=9999&& node server/playwright-api-server.js",
+    "storage:server": "node server/storage-api-server.js"
+  },
+  "dependencies": {
+    "@google/genai": "^1.30.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "i18next": "^23.13.0",
+    "i18next-browser-languagedetector": "^8.0.0",
+    "i18next-http-backend": "^2.5.2",
+    "lucide-react": "^0.554.0",
+    "lz-string": "^1.5.0",
+    "playwright": "^1.61.1",
+    "puppeteer": "^24.31.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-i18next": "^15.0.0",
+    "recharts": "^3.4.1",
+    "ssh2": "^1.17.0",
+    "xlsx": "0.18.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.17",
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.0.0",
+    "cross-env": "^10.1.0",
+    "tailwindcss": "^4.1.17",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0",
+    "wrangler": "^4.83.0"
+  }
+}

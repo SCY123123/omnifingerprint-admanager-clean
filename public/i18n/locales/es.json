@@ -1,0 +1,273 @@
+
+{
+  "sidebar": {
+    "dashboard": "Panel",
+    "automation": "Automatización de Anuncios",
+    "proxyNav": "Navegación Proxy",
+    "payment": "Pago",
+    "settings": "Configuración",
+    "signOut": "Cerrar Sesión",
+    "platforms": "Plataformas",
+    "cloudflare": "Cloudflare",
+    "meta": {
+      "profiles": "Perfiles",
+      "pages": "Páginas",
+      "bms": "Administradores Comerciales",
+      "adAccounts": "Cuentas Publicitarias"
+    }
+  },
+  "proxyNav": {
+    "title": "Navegación Proxy",
+    "subtitle": "Ver objetivo actual y probar conectividad mediante el proxy de desarrollo.",
+    "currentTarget": "Objetivo Actual",
+    "test": "Probar Conectividad",
+    "statusOnline": "En línea",
+    "statusOffline": "Sin conexión",
+    "statusUnknown": "Desconocido",
+    "help": "Configura NAV_PROXY_TARGET en .env para el proxy de desarrollo"
+  },
+  "cloudflare": {
+    "main": { "title": "Cloudflare", "subtitle": "Gestionar cuentas de Cloudflare y probar la API", "openConsole": "Abrir Consola" },
+    "add": { "panelTitle": "Agregar Credenciales", "labels": { "username": "Usuario", "email": "Correo", "password": "Contraseña", "apiKey": "API Key" }, "actions": { "save": "Guardar" }, "validationEnterUsernameOrEmail": "Introduce usuario o correo" },
+    "list": { "panelTitle": "Lista de Cuentas", "actions": { "refresh": "Actualizar", "testApi": "Probar API" }, "empty": "No hay cuentas de Cloudflare", "table": { "name": "Nombre", "email": "Correo", "apiKey": "API Key", "actions": "Acciones" }, "status": { "tokenSet": "Configurado" } },
+    "zones": { "title": "Zones", "accountPrefix": "Cuenta", "empty": "Sin Zones" }
+  },
+  "dashboard": {
+    "title": "Resumen General",
+    "subtitle": "Métricas del sistema y rendimiento de anuncios en tiempo real.",
+    "totalProfiles": "Perfiles Totales",
+    "activeSpend": "Gasto Activo en Anuncios",
+    "activeCampaigns": "Campañas Activas",
+    "avgROI": "ROI Promedio",
+    "fromLastMonth": "del último mes",
+    "trafficSpendTrends": "Tendencias de Tráfico y Gasto",
+    "conversionBreakdown": "Desglose de Conversiones"
+  },
+   "status": {
+    "active": "Activo",
+    "restricted": "Restringido",
+    "disabled": "Desactivado",
+    "review": "En Revisión",
+    "unknown": "Desconocido",
+    "payment": {
+        "active": "Activo",
+        "failed": "Fallido",
+        "none": "Ninguno"
+    }
+  },
+  "profileManager": {
+    "title": "Perfiles de Navegador",
+    "subtitle": "Gestiona huellas digitales únicas para operaciones de múltiples cuentas.",
+    "import": "Importar",
+    "export": "Exportar Excel",
+    "newProfile": "Nuevo Perfil",
+    "importSuccess": "Se importaron {{count}} perfiles con éxito.",
+    "searchPlaceholder": "Buscar perfiles por nombre o ID...",
+    "all": "Todos",
+    "table": {
+      "id": "#",
+      "name": "Nombre del Perfil",
+      "platform": "Plataforma",
+      "accountStatus": "Salud de la Cuenta",
+      "status": "Estado",
+      "actions": "Acciones",
+      "account": "Cuenta",
+      "email": "Email",
+      "password": "Contraseña",
+      "twofa": "2FA",
+      "notes": "Notas",
+      "country": "País",
+      "bmId": "ID de BM",
+      "pages": "Páginas",
+      "adAccounts": "Cuentas Pub",
+      "payment": "Pago"
+    },
+    "actions": {
+      "launch": "Iniciar Navegador",
+      "launchLocal": "Iniciar instancia de navegador local",
+      "stop": "Detener Navegador",
+      "edit": "Editar Perfil"
+    },
+    "batch": {
+      "selected": "Seleccionados",
+      "launch": "Iniciar",
+      "stop": "Detener",
+      "checkStatus": "Verificar Estado",
+      "delete": "Eliminar",
+      "deleteConfirm": "¿Estás seguro de que quieres eliminar {{count}} perfiles?",
+      "checkComplete": "Verificación de estado completada para los perfiles seleccionados.",
+      "moreActions": "Más Acciones",
+      "relogin": "Re-conectar",
+      "getInfo": "Obtener Información",
+      "createPage": "Crear Página",
+      "createBM": "Crear BM",
+      "createAdAccount": "Crear Cuenta Publicitaria",
+      "changeCurrencyTimezone": "Cambiar Moneda/Zona Horaria",
+      "addPayment": "Añadir Pago",
+      "topUp": "Recargar",
+      "actionInitiated": "Acción '{{action}}' iniciada para {{count}} perfiles.",
+      "getInfoComplete": "Información actualizada con éxito para {{count}} perfiles."
+    }
+  },
+  "adAutomation": {
+    "title": "Automatización de Anuncios",
+    "subtitle": "Genera textos de alta conversión con Gemini y publícalos en las API oficiales.",
+    "generationError": "Error al generar el texto. Revisa la consola o tu clave de API.",
+    "labels": {
+      "platform": "Plataforma de Destino",
+      "productName": "Nombre del Producto",
+      "productDetails": "Detalles del Producto / PVU",
+      "tone": "Tono de Voz"
+    },
+    "placeholders": {
+      "productName": "Ej: Zapatillas UltraComfort",
+      "productDetails": "Describe las características clave, público objetivo y beneficios..."
+    },
+    "tones": {
+      "PersuasiveandUrgent": "Persuasivo y Urgente",
+      "FriendlyandCasual": "Amigable y Casual",
+      "ProfessionalandAuthoritative": "Profesional y Autoritario",
+      "LuxuryandElegant": "Lujoso y Elegante",
+      "ViralGen-ZStyle": "Viral / Estilo Gen-Z"
+    },
+    "generateButton": "Generar Contenido de Anuncio",
+    "previewTitle": "Vista Previa del Contenido Generado",
+    "previewPlaceholder": "El contenido aparecerá aquí...",
+    "accountLabel": "Cuenta",
+    "publishButton": "Publicar en API",
+    "publishSuccess": "Campaña publicada con éxito en la API de {{platform}}.",
+    "publishError": "Error de API: Presupuesto o configuración de segmentación no válidos."
+  },
+  "settings": {
+    "unavailable": {
+      "title": "Configuración No Disponible",
+      "description": "La configuración de API y las preferencias del sistema estarán disponibles próximamente."
+    }
+  },
+  "profileCreator": {
+    "title": "Crear Nuevo Perfil",
+    "subtitle": "Configura un entorno de navegador único para tus operaciones.",
+    "editTitle": "Editar Perfil",
+    "editSubtitle": "Actualiza la configuración para este entorno de navegador.",
+    "backButton": "Volver a Perfiles",
+    "createButton": "Crear Perfil",
+    "saveButton": "Guardar Cambios",
+    "cancelButton": "Cancelar",
+    "currentUser": "Usuario Actual",
+    "random": "Aleatorio",
+    "sections": {
+      "basic": {
+        "title": "Información Básica",
+        "batchCount": {
+          "label": "Cantidad de Creación por Lote",
+          "helper": "Se pueden crear hasta 100 perfiles a la vez."
+        },
+        "profileName": {
+          "label": "Nombre del Perfil",
+          "placeholder": "Introduce el nombre del perfil",
+          "helper": "El ID y los sufijos de nombre se asignarán automáticamente."
+        }
+      },
+      "grouping": {
+        "title": "Agrupación y Etiquetas",
+        "group": { "label": "Grupo", "helper": "Asigna a un grupo nuevo o existente para organizarlo." },
+        "tags": { "label": "Etiquetas", "helper": "Ej: facebook, ads, test (separadas por comas)." },
+        "owner": { "label": "Propietario", "helper": "El valor predeterminado es el usuario actual; los administradores pueden cambiarlo." }
+      },
+      "fingerprint": {
+        "title": "Huella Digital del Navegador",
+        "os": { "label": "Sistema Operativo" },
+        "userAgent": { "label": "User Agent", "helper": "Se genera un UA aleatorio basado en el SO seleccionado." },
+        "resolution": { "label": "Resolución de Pantalla" },
+        "timezone": { "label": "Zona Horaria" },
+        "language": { "label": "Idioma" }
+      },
+      "protection": {
+        "title": "Protección de Huella Digital",
+        "canvas": "Huella de Canvas",
+        "webgl": "Huella de WebGL",
+        "audio": "Huella de Audio"
+      },
+      "proxy": {
+        "title": "Configuración de Proxy",
+        "enable": "Habilitar Proxy",
+        "type": { "label": "Tipo de Proxy" },
+        "host": { "label": "Host", "helper": "Puede pegar la cadena de proxy completa aquí (por ejemplo, host:puerto:usuario:contraseña)." },
+        "port": { "label": "Puerto" },
+        "username": { "label": "Usuario (Opcional)" },
+        "password": { "label": "Contraseña (Opcional)" }
+      },
+      "startup": {
+        "title": "Sitios Web de Inicio",
+        "custom": { "label": "URL de Sitios Web Personalizados", "helper": "Una URL por línea." }
+      },
+      "account": {
+        "title": "Información de la Cuenta",
+        "name": { "label": "Nombre de la Cuenta", "helper": "Nombre de usuario para iniciar sesión." },
+        "email": { "label": "Dirección de Correo Electrónico" },
+        "password": { "label": "Contraseña de la Cuenta" },
+        "twoFactor": { "label": "Secreto 2FA", "helper": "Clave TOTP o código de respaldo." },
+        "cookies": { "label": "Datos de Cookies", "helper": "Pega cookies en formato JSON o Netscape." }
+      },
+      "notes": {
+        "title": "Notas",
+        "remarks": { "label": "Comentarios", "placeholder": "Registra otra información importante o notas..." }
+      }
+    }
+  },
+  "assetViewer": {
+    "titlePages": "Páginas de Meta",
+    "subtitlePages": "Ver y gestionar todas las páginas de Facebook en tus perfiles.",
+    "titleBMs": "Administradores Comerciales de Meta",
+    "subtitleBMs": "Resumen de todas las cuentas del Administrador Comercial y su estado.",
+    "titleAdAccounts": "Cuentas Publicitarias de Meta",
+    "subtitleAdAccounts": "Monitorea todas las cuentas publicitarias vinculadas a tus perfiles.",
+    "noAssets": "No se encontraron activos de este tipo en tus perfiles.",
+    "table": {
+        "id": "#",
+        "profileName": "Nombre del Perfil",
+        "pageName": "Nombre de la Página",
+        "pageId": "ID de la Página",
+        "pageLikes": "Me gusta",
+        "pageStatus": "Estado",
+        "bmId": "ID del BM",
+        "bmStatus": "Estado del BM",
+        "payment": "Pago",
+        "adAccountId": "ID de Cuenta Publicitaria",
+        "adAccountStatus": "Estado",
+        "adAccountSpend": "Gasto (USD)"
+    },
+    "status": {
+        "published": "Publicada",
+        "unpublished": "No publicada",
+        "active": "Activo",
+        "restricted": "Restringido",
+        "ban": "Bloqueado",
+        "inReview": "En revisión",
+        "disabled": "Desactivado",
+        "verified": "Verificado",
+        "notVerified": "No verificado"
+    },
+    "batch": {
+      "selected": "Seleccionados",
+      "delete": "Eliminar",
+      "deleteConfirm": "¿Estás seguro de que quieres eliminar {{count}} activos seleccionados?",
+      "publish": "Publicar",
+      "unpublish": "Anular publicación",
+      "checkStatus": "Verificar Estado",
+      "addPayment": "Añadir Pago",
+      "enable": "Activar",
+      "disable": "Desactivar",
+      "checkSpend": "Verificar Gasto",
+      "actionInitiated": "Acción '{{action}}' iniciada para {{count}} activos."
+    }
+  }
+  ,
+  "analytics": {
+    "title": "Analítica de Navegación",
+    "empty": "Sin datos",
+    "error": "Error al cargar",
+    "table": { "time": "Hora", "event": "Evento", "from": "Desde", "to": "Hacia", "locale": "Idioma" }
+  },
+  "common": { "refresh": "Actualizar", "loading": "Cargando..." }
+}

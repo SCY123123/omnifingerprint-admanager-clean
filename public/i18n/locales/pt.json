@@ -1,0 +1,273 @@
+
+{
+  "sidebar": {
+    "dashboard": "Painel",
+    "automation": "Automação de Anúncios",
+    "proxyNav": "Navegação Proxy",
+    "payment": "Pagamento",
+    "settings": "Configurações",
+    "signOut": "Sair",
+    "platforms": "Plataformas",
+    "cloudflare": "Cloudflare",
+    "meta": {
+      "profiles": "Perfis",
+      "pages": "Páginas",
+      "bms": "Gerenciadores de Negócios",
+      "adAccounts": "Contas de Anúncios"
+    }
+  },
+  "proxyNav": {
+    "title": "Navegação Proxy",
+    "subtitle": "Ver o alvo atual e testar a conectividade via proxy de desenvolvimento.",
+    "currentTarget": "Alvo Atual",
+    "test": "Testar Conectividade",
+    "statusOnline": "Online",
+    "statusOffline": "Offline",
+    "statusUnknown": "Desconhecido",
+    "help": "Defina NAV_PROXY_TARGET no .env para configurar o proxy de desenvolvimento"
+  },
+  "cloudflare": {
+    "main": { "title": "Cloudflare", "subtitle": "Gerenciar contas Cloudflare e testar a API", "openConsole": "Abrir Console" },
+    "add": { "panelTitle": "Adicionar Credenciais", "labels": { "username": "Usuário", "email": "E-mail", "password": "Senha", "apiKey": "API Key" }, "actions": { "save": "Salvar" }, "validationEnterUsernameOrEmail": "Informe usuário ou e-mail" },
+    "list": { "panelTitle": "Lista de Contas", "actions": { "refresh": "Atualizar", "testApi": "Testar API" }, "empty": "Nenhuma conta Cloudflare", "table": { "name": "Nome", "email": "E-mail", "apiKey": "API Key", "actions": "Ações" }, "status": { "tokenSet": "Configurado" } },
+    "zones": { "title": "Zones", "accountPrefix": "Conta", "empty": "Sem Zones" }
+  },
+  "dashboard": {
+    "title": "Visão Geral",
+    "subtitle": "Métricas do sistema em tempo real e desempenho dos anúncios.",
+    "totalProfiles": "Total de Perfis",
+    "activeSpend": "Gasto Ativo em Anúncios",
+    "activeCampaigns": "Campanhas Ativas",
+    "avgROI": "ROI Médio",
+    "fromLastMonth": "do último mês",
+    "trafficSpendTrends": "Tendências de Tráfego e Gastos",
+    "conversionBreakdown": "Análise de Conversão"
+  },
+  "status": {
+    "active": "Ativo",
+    "restricted": "Restrito",
+    "disabled": "Desativado",
+    "review": "Em análise",
+    "unknown": "Desconhecido",
+    "payment": {
+      "active": "Ativo",
+      "failed": "Falhou",
+      "none": "Nenhum"
+    }
+  },
+  "profileManager": {
+    "title": "Perfis de Navegador",
+    "subtitle": "Gerencie impressões digitais únicas para operações de várias contas.",
+    "import": "Importar",
+    "export": "Exportar Excel",
+    "newProfile": "Novo Perfil",
+    "importSuccess": "{{count}} perfis importados com sucesso.",
+    "searchPlaceholder": "Pesquisar perfis por nome ou ID...",
+    "all": "Todos",
+    "table": {
+      "id": "#",
+      "name": "Nome do Perfil",
+      "platform": "Plataforma",
+      "accountStatus": "Saúde da Conta",
+      "status": "Status",
+      "actions": "Ações",
+      "account": "Conta",
+      "email": "E-mail",
+      "password": "Senha",
+      "twofa": "2FA",
+      "notes": "Notas",
+      "country": "País",
+      "bmId": "ID do BM",
+      "pages": "Páginas",
+      "adAccounts": "Contas de Anún.",
+      "payment": "Pagamento"
+    },
+    "actions": {
+      "launch": "Iniciar Navegador",
+      "launchLocal": "Iniciar instância do navegador local",
+      "stop": "Parar Navegador",
+      "edit": "Editar Perfil"
+    },
+    "batch": {
+      "selected": "Selecionados",
+      "launch": "Iniciar",
+      "stop": "Parar",
+      "checkStatus": "Verificar Status",
+      "delete": "Deletar",
+      "deleteConfirm": "Tem certeza de que deseja deletar {{count}} perfis?",
+      "checkComplete": "Verificação de status concluída para os perfis selecionados.",
+      "moreActions": "Mais Ações",
+      "relogin": "Re-logar",
+      "getInfo": "Obter Informações",
+      "createPage": "Criar Página",
+      "createBM": "Criar BM",
+      "createAdAccount": "Criar Conta de Anúncios",
+      "changeCurrencyTimezone": "Mudar Moeda/Fuso Horário",
+      "addPayment": "Adicionar Pagamento",
+      "topUp": "Recarregar",
+      "actionInitiated": "Ação '{{action}}' iniciada para {{count}} perfis.",
+      "getInfoComplete": "Informações atualizadas com sucesso para {{count}} perfis."
+    }
+  },
+  "adAutomation": {
+    "title": "Automação de Anúncios",
+    "subtitle": "Gere textos de alta conversão com o Gemini e publique nas APIs oficiais.",
+    "generationError": "Erro ao gerar texto. Verifique o console/chave da API.",
+    "labels": {
+      "platform": "Plataforma Alvo",
+      "productName": "Nome do Produto",
+      "productDetails": "Detalhes do Produto / USP",
+      "tone": "Tom de Voz"
+    },
+    "placeholders": {
+      "productName": "Ex: Tênis UltraConforto",
+      "productDetails": "Descreva as principais características, público-alvo e benefícios..."
+    },
+    "tones": {
+      "PersuasiveandUrgent": "Persuasivo e Urgente",
+      "FriendlyandCasual": "Amigável e Casual",
+      "ProfessionalandAuthoritative": "Profissional e Autoritário",
+      "LuxuryandElegant": "Luxuoso e Elegante",
+      "ViralGen-ZStyle": "Viral / Estilo Geração Z"
+    },
+    "generateButton": "Gerar Conteúdo do Anúncio",
+    "previewTitle": "Prévia do Conteúdo Gerado",
+    "previewPlaceholder": "O conteúdo aparecerá aqui...",
+    "accountLabel": "Conta",
+    "publishButton": "Publicar na API",
+    "publishSuccess": "Campanha publicada com sucesso na API da {{platform}}.",
+    "publishError": "Erro de API: Orçamento ou configuração de segmentação inválidos."
+  },
+  "settings": {
+    "unavailable": {
+      "title": "Configurações Indisponíveis",
+      "description": "Configuração da API e preferências do sistema em breve."
+    }
+  },
+  "profileCreator": {
+    "title": "Criar Novo Perfil",
+    "subtitle": "Configure um ambiente de navegador exclusivo para suas operações.",
+    "editTitle": "Editar Perfil",
+    "editSubtitle": "Atualize a configuração para este ambiente de navegador.",
+    "backButton": "Voltar para Perfis",
+    "createButton": "Criar Perfil",
+    "saveButton": "Salvar Alterações",
+    "cancelButton": "Cancelar",
+    "currentUser": "Usuário Atual",
+    "random": "Aleatório",
+    "sections": {
+      "basic": {
+        "title": "Informações Básicas",
+        "batchCount": {
+          "label": "Quantidade de Criação em Lote",
+          "helper": "Até 100 perfis podem ser criados de uma vez."
+        },
+        "profileName": {
+          "label": "Nome do Perfil",
+          "placeholder": "Digite o nome do perfil",
+          "helper": "ID e sufixos de nome serão atribuídos automaticamente."
+        }
+      },
+      "grouping": {
+        "title": "Agrupamento e Tags",
+        "group": { "label": "Grupo", "helper": "Atribua a um grupo novo ou existente para organização." },
+        "tags": { "label": "Tags", "helper": "Ex: facebook, ads, test (separados por vírgula)." },
+        "owner": { "label": "Proprietário", "helper": "O padrão é o usuário atual; administradores podem alterar isso." }
+      },
+      "fingerprint": {
+        "title": "Impressão Digital do Navegador",
+        "os": { "label": "Sistema Operacional" },
+        "userAgent": { "label": "User Agent", "helper": "Um UA aleatório é gerado com base no SO selecionado." },
+        "resolution": { "label": "Resolução da Tela" },
+        "timezone": { "label": "Fuso Horário" },
+        "language": { "label": "Idioma" }
+      },
+      "protection": {
+        "title": "Proteção de Impressão Digital",
+        "canvas": "Impressão Digital de Canvas",
+        "webgl": "Impressão Digital de WebGL",
+        "audio": "Impressão Digital de Áudio"
+      },
+      "proxy": {
+        "title": "Configurações de Proxy",
+        "enable": "Habilitar Proxy",
+        "type": { "label": "Tipo de Proxy" },
+        "host": { "label": "Host", "helper": "Você pode colar a string de proxy completa aqui (ex: host:porta:usuário:senha)." },
+        "port": { "label": "Porta" },
+        "username": { "label": "Nome de Usuário (Opcional)" },
+        "password": { "label": "Senha (Opcional)" }
+      },
+      "startup": {
+        "title": "Sites de Inicialização",
+        "custom": { "label": "URLs de Sites Personalizados", "helper": "Uma URL por linha." }
+      },
+      "account": {
+        "title": "Informações da Conta",
+        "name": { "label": "Nome da Conta", "helper": "Nome de usuário para login." },
+        "email": { "label": "Endereço de E-mail" },
+        "password": { "label": "Senha da Conta" },
+        "twoFactor": { "label": "Segredo 2FA", "helper": "Chave TOTP ou código de backup." },
+        "cookies": { "label": "Dados de Cookies", "helper": "Cole os cookies em formato JSON ou Netscape." }
+      },
+      "notes": {
+        "title": "Notas",
+        "remarks": { "label": "Observações", "placeholder": "Registre outras informações importantes ou notas..." }
+      }
+    }
+  },
+  "assetViewer": {
+    "titlePages": "Páginas da Meta",
+    "subtitlePages": "Visualize e gerencie todas as Páginas do Facebook em seus perfis.",
+    "titleBMs": "Gerenciadores de Negócios da Meta",
+    "subtitleBMs": "Visão geral de todas as contas do Gerenciador de Negócios e seu status.",
+    "titleAdAccounts": "Contas de Anúncios da Meta",
+    "subtitleAdAccounts": "Monitore todas as contas de anúncios vinculadas aos seus perfis.",
+    "noAssets": "Nenhum ativo deste tipo encontrado em seus perfis.",
+    "table": {
+        "id": "#",
+        "profileName": "Nome do Perfil",
+        "pageName": "Nome da Página",
+        "pageId": "ID da Página",
+        "pageLikes": "Curtidas",
+        "pageStatus": "Status",
+        "bmId": "ID do BM",
+        "bmStatus": "Status do BM",
+        "payment": "Pagamento",
+        "adAccountId": "ID da Conta de Anúncios",
+        "adAccountStatus": "Status",
+        "adAccountSpend": "Gasto (USD)"
+    },
+    "status": {
+        "published": "Publicada",
+        "unpublished": "Não publicada",
+        "active": "Ativo",
+        "restricted": "Restrito",
+        "ban": "Banido",
+        "inReview": "Em análise",
+        "disabled": "Desativado",
+        "verified": "Verificado",
+        "notVerified": "Não verificado"
+    },
+    "batch": {
+      "selected": "Selecionados",
+      "delete": "Deletar",
+      "deleteConfirm": "Tem certeza de que deseja deletar {{count}} ativos selecionados?",
+      "publish": "Publicar",
+      "unpublish": "Despublicar",
+      "checkStatus": "Verificar Status",
+      "addPayment": "Adicionar Pagamento",
+      "enable": "Ativar",
+      "disable": "Desativar",
+      "checkSpend": "Verificar Gasto",
+      "actionInitiated": "Ação '{{action}}' iniciada para {{count}} ativos."
+    }
+  }
+  ,
+  "analytics": {
+    "title": "Análise de Navegação",
+    "empty": "Sem dados",
+    "error": "Falha ao carregar",
+    "table": { "time": "Hora", "event": "Evento", "from": "De", "to": "Para", "locale": "Idioma" }
+  },
+  "common": { "refresh": "Atualizar", "loading": "Carregando..." }
+}

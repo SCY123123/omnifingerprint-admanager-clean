@@ -1,0 +1,273 @@
+
+{
+  "sidebar": {
+    "dashboard": "Панель",
+    "automation": "Автоматизация Рекламы",
+    "proxyNav": "Прокси-навигация",
+    "payment": "Оплата",
+    "settings": "Настройки",
+    "signOut": "Выйти",
+    "platforms": "Платформы",
+    "cloudflare": "Cloudflare",
+    "meta": {
+      "profiles": "Профили",
+      "pages": "Страницы",
+      "bms": "Бизнес-менеджеры",
+      "adAccounts": "Рекламные аккаунты"
+    }
+  },
+  "proxyNav": {
+    "title": "Прокси-навигация",
+    "subtitle": "Просмотр текущей цели и проверка соединения через dev-прокси.",
+    "currentTarget": "Текущая цель",
+    "test": "Проверить соединение",
+    "statusOnline": "Онлайн",
+    "statusOffline": "Оффлайн",
+    "statusUnknown": "Неизвестно",
+    "help": "Установите NAV_PROXY_TARGET в .env для настройки dev-прокси"
+  },
+  "cloudflare": {
+    "main": { "title": "Cloudflare", "subtitle": "Управление аккаунтами Cloudflare и проверка API", "openConsole": "Открыть консоль" },
+    "add": { "panelTitle": "Добавить учетные данные", "labels": { "username": "Имя пользователя", "email": "Email", "password": "Пароль", "apiKey": "API Key" }, "actions": { "save": "Сохранить" }, "validationEnterUsernameOrEmail": "Введите имя пользователя или email" },
+    "list": { "panelTitle": "Список аккаунтов", "actions": { "refresh": "Обновить", "testApi": "Тест API" }, "empty": "Нет аккаунтов Cloudflare", "table": { "name": "Имя", "email": "Email", "apiKey": "API Key", "actions": "Действия" }, "status": { "tokenSet": "Настроено" } },
+    "zones": { "title": "Zones", "accountPrefix": "Аккаунт", "empty": "Зон нет" }
+  },
+  "dashboard": {
+    "title": "Обзор",
+    "subtitle": "Системные метрики и эффективность рекламы в реальном времени.",
+    "totalProfiles": "Всего профилей",
+    "activeSpend": "Активные расходы на рекламу",
+    "activeCampaigns": "Активные кампании",
+    "avgROI": "Средний ROI",
+    "fromLastMonth": "с прошлого месяца",
+    "trafficSpendTrends": "Тренды трафика и расходов",
+    "conversionBreakdown": "Разбивка конверсий"
+  },
+  "status": {
+    "active": "Активен",
+    "restricted": "Ограничен",
+    "disabled": "Отключен",
+    "review": "На проверке",
+    "unknown": "Неизвестно",
+    "payment": {
+      "active": "Активен",
+      "failed": "Ошибка",
+      "none": "Нет"
+    }
+  },
+  "profileManager": {
+    "title": "Профили браузера",
+    "subtitle": "Управляйте уникальными цифровыми отпечатками для работы с несколькими аккаунтами.",
+    "import": "Импорт",
+    "export": "Экспорт в Excel",
+    "newProfile": "Новый профиль",
+    "importSuccess": "Успешно импортировано {{count}} профилей.",
+    "searchPlaceholder": "Поиск профилей по имени или ID...",
+    "all": "Все",
+    "table": {
+      "id": "№",
+      "name": "Имя профиля",
+      "platform": "Платформа",
+      "accountStatus": "Состояние аккаунта",
+      "status": "Статус",
+      "actions": "Действия",
+      "account": "Аккаунт",
+      "email": "Email",
+      "password": "Пароль",
+      "twofa": "2FA",
+      "notes": "Заметки",
+      "country": "Страна",
+      "bmId": "ID BM",
+      "pages": "Страницы",
+      "adAccounts": "Рекл. акк.",
+      "payment": "Оплата"
+    },
+    "actions": {
+      "launch": "Запустить браузер",
+      "launchLocal": "Запустить локальный экземпляр браузера",
+      "stop": "Остановить браузер",
+      "edit": "Редактировать профиль"
+    },
+    "batch": {
+      "selected": "Выбрано",
+      "launch": "Запустить",
+      "stop": "Остановить",
+      "checkStatus": "Проверить статус",
+      "delete": "Удалить",
+      "deleteConfirm": "Вы уверены, что хотите удалить {{count}} профилей?",
+      "checkComplete": "Проверка статуса для выбранных профилей завершена.",
+      "moreActions": "Ещё действия",
+      "relogin": "Перелогиниться",
+      "getInfo": "Получить информацию",
+      "createPage": "Создать страницу",
+      "createBM": "Создать BM",
+      "createAdAccount": "Создать рекламный аккаунт",
+      "changeCurrencyTimezone": "Изменить валюту/часовой пояс",
+      "addPayment": "Добавить платеж",
+      "topUp": "Пополнить",
+      "actionInitiated": "Действие '{{action}}' запущено для {{count}} профилей.",
+      "getInfoComplete": "Информация для {{count}} профилей успешно обновлена."
+    }
+  },
+  "adAutomation": {
+    "title": "Автоматизация рекламы",
+    "subtitle": "Создавайте высококонверсионные тексты с помощью Gemini и публикуйте их через официальные API.",
+    "generationError": "Ошибка при генерации текста. Проверьте консоль/ключ API.",
+    "labels": {
+      "platform": "Целевая платформа",
+      "productName": "Название продукта",
+      "productDetails": "Детали продукта / УТП",
+      "tone": "Тон голоса"
+    },
+    "placeholders": {
+      "productName": "Напр., кроссовки UltraComfort",
+      "productDetails": "Опишите ключевые особенности, целевую аудиторию и преимущества..."
+    },
+    "tones": {
+      "PersuasiveandUrgent": "Убедительный и срочный",
+      "FriendlyandCasual": "Дружелюбный и непринужденный",
+      "ProfessionalandAuthoritative": "Профессиональный и авторитетный",
+      "LuxuryandElegant": "Роскошный и элегантный",
+      "ViralGen-ZStyle": "Вирусный / Стиль Gen-Z"
+    },
+    "generateButton": "Сгенерировать рекламный контент",
+    "previewTitle": "Предпросмотр сгенерированного контента",
+    "previewPlaceholder": "Контент появится здесь...",
+    "accountLabel": "Аккаунт",
+    "publishButton": "Опубликовать в API",
+    "publishSuccess": "Кампания успешно опубликована в API {{platform}}.",
+    "publishError": "Ошибка API: Неверный бюджет или конфигурация таргетинга."
+  },
+  "settings": {
+    "unavailable": {
+      "title": "Настройки недоступны",
+      "description": "Конфигурация API и системные настройки скоро появятся."
+    }
+  },
+  "profileCreator": {
+    "title": "Создать новый профиль",
+    "subtitle": "Настройте уникальную среду браузера для ваших операций.",
+    "editTitle": "Редактировать профиль",
+    "editSubtitle": "Обновите конфигурацию для этой среды браузера.",
+    "backButton": "Назад к профилям",
+    "createButton": "Создать профиль",
+    "saveButton": "Сохранить изменения",
+    "cancelButton": "Отмена",
+    "currentUser": "Текущий пользователь",
+    "random": "Случайный",
+    "sections": {
+      "basic": {
+        "title": "Основная информация",
+        "batchCount": {
+          "label": "Количество для пакетного создания",
+          "helper": "Одновременно можно создать до 100 профилей."
+        },
+        "profileName": {
+          "label": "Имя профиля",
+          "placeholder": "Введите имя профиля",
+          "helper": "ID и суффиксы имен будут назначены автоматически."
+        }
+      },
+      "grouping": {
+        "title": "Группировка и теги",
+        "group": { "label": "Группа", "helper": "Назначьте в новую или существующую группу для организации." },
+        "tags": { "label": "Теги", "helper": "Напр., facebook, ads, test (через запятую)." },
+        "owner": { "label": "Владелец", "helper": "По умолчанию текущий пользователь; администраторы могут изменить это." }
+      },
+      "fingerprint": {
+        "title": "Отпечаток браузера",
+        "os": { "label": "Операционная система" },
+        "userAgent": { "label": "User Agent", "helper": "Случайный UA генерируется на основе выбранной ОС." },
+        "resolution": { "label": "Разрешение экрана" },
+        "timezone": { "label": "Часовой пояс" },
+        "language": { "label": "Язык" }
+      },
+      "protection": {
+        "title": "Защита отпечатка",
+        "canvas": "Отпечаток Canvas",
+        "webgl": "Отпечаток WebGL",
+        "audio": "Аудиоотпечаток"
+      },
+      "proxy": {
+        "title": "Настройки прокси",
+        "enable": "Включить прокси",
+        "type": { "label": "Тип прокси" },
+        "host": { "label": "Хост", "helper": "Вы можете вставить полную строку прокси здесь (например, host:port:user:pass)." },
+        "port": { "label": "Порт" },
+        "username": { "label": "Имя пользователя (необязательно)" },
+        "password": { "label": "Пароль (необязательно)" }
+      },
+      "startup": {
+        "title": "Стартовые веб-сайты",
+        "custom": { "label": "Пользовательские URL-адреса веб-сайтов", "helper": "Один URL в строке." }
+      },
+      "account": {
+        "title": "Информация об аккаунте",
+        "name": { "label": "Имя аккаунта", "helper": "Имя пользователя для входа." },
+        "email": { "label": "Адрес электронной почты" },
+        "password": { "label": "Пароль аккаунта" },
+        "twoFactor": { "label": "Секрет 2FA", "helper": "Ключ TOTP или резервный код." },
+        "cookies": { "label": "Данные cookie", "helper": "Вставьте cookie в формате JSON или Netscape." }
+      },
+      "notes": {
+        "title": "Заметки",
+        "remarks": { "label": "Примечания", "placeholder": "Запишите другую важную информацию или заметки..." }
+      }
+    }
+  },
+  "assetViewer": {
+    "titlePages": "Страницы Meta",
+    "subtitlePages": "Просмотр и управление всеми страницами Facebook в ваших профилях.",
+    "titleBMs": "Бизнес-менеджеры Meta",
+    "subtitleBMs": "Обзор всех аккаунтов Бизнес-менеджера и их статуса.",
+    "titleAdAccounts": "Рекламные аккаунты Meta",
+    "subtitleAdAccounts": "Мониторинг всех рекламных аккаунтов, связанных с вашими профилями.",
+    "noAssets": "Активы этого типа не найдены в ваших профилях.",
+    "table": {
+        "id": "№",
+        "profileName": "Имя профиля",
+        "pageName": "Название страницы",
+        "pageId": "ID страницы",
+        "pageLikes": "Лайки",
+        "pageStatus": "Статус",
+        "bmId": "ID BM",
+        "bmStatus": "Статус BM",
+        "payment": "Оплата",
+        "adAccountId": "ID рекламного аккаунта",
+        "adAccountStatus": "Статус",
+        "adAccountSpend": "Расход (USD)"
+    },
+    "status": {
+        "published": "Опубликовано",
+        "unpublished": "Не опубликовано",
+        "active": "Активен",
+        "restricted": "Ограничен",
+        "ban": "Забанен",
+        "inReview": "На рассмотрении",
+        "disabled": "Отключен",
+        "verified": "Подтвержден",
+        "notVerified": "Не подтвержден"
+    },
+    "batch": {
+      "selected": "Выбрано",
+      "delete": "Удалить",
+      "deleteConfirm": "Вы уверены, что хотите удалить {{count}} выбранных активов?",
+      "publish": "Опубликовать",
+      "unpublish": "Снять с публикации",
+      "checkStatus": "Проверить статус",
+      "addPayment": "Добавить платеж",
+      "enable": "Включить",
+      "disable": "Отключить",
+      "checkSpend": "Проверить расходы",
+      "actionInitiated": "Действие '{{action}}' запущено для {{count}} активов."
+    }
+  }
+  ,
+  "analytics": {
+    "title": "Аналитика навигации",
+    "empty": "Нет данных",
+    "error": "Ошибка загрузки",
+    "table": { "time": "Время", "event": "Событие", "from": "Откуда", "to": "Куда", "locale": "Язык" }
+  },
+  "common": { "refresh": "Обновить", "loading": "Загрузка..." }
+}

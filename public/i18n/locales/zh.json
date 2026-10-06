@@ -1,0 +1,485 @@
+{
+  "sidebar": {
+    "dashboard": "仪表盘",
+    "automation": "广告自动化",
+    "adTemplates": "广告模板",
+    "settings": "设置",
+    "signOut": "登出",
+    "platforms": "平台",
+    "domain": "域名",
+    "proxyNav": "IP 代理管理",
+    "servers": "服务器",
+    "cloudflare": "Cloudflare",
+    "payment": "账单",
+    "meta": {
+      "profiles": "账号",
+      "pages": "Page",
+      "bms": "BM",
+      "adAccounts": "广告号"
+    }
+  },
+  "proxyNav": {
+    "title": "代理导航",
+    "subtitle": "查看当前目标并通过开发代理测试连通性。",
+    "currentTarget": "当前目标",
+    "test": "测试连通性",
+    "statusOnline": "在线",
+    "statusOffline": "离线",
+    "statusUnknown": "未知",
+    "help": "请在 .env 中设置 NAV_PROXY_TARGET 以配置开发代理。"
+  },
+  "dashboard": {
+    "title": "概览",
+    "subtitle": "实时系统指标和广告表现。",
+    "totalProfiles": "总配置数",
+    "activeSpend": "活跃广告支出",
+    "activeCampaigns": "活跃广告活动",
+    "avgROI": "平均回报率",
+    "fromLastMonth": "与上月相比",
+    "trafficSpendTrends": "流量与支出趋势",
+    "conversionBreakdown": "转化分析"
+  },
+  "status": {
+    "unnamed": "未命名",
+    "unknownError": "未知错误",
+    "active": "活跃",
+    "restricted": "受限",
+    "disabled": "封禁",
+    "review": "审核中",
+    "unknown": "未知",
+    "payment": {
+      "active": "正常",
+      "failed": "失败",
+      "none": "无"
+    }
+  },
+  "profileManager": {
+    "title": "浏览器配置",
+    "subtitle": "管理用于多账户操作的独立数字指纹。",
+    "import": "导入",
+    "export": "导出 Excel",
+    "newProfile": "新建配置",
+    "importSuccess": "成功导入 {{count}} 个配置。",
+    "searchPlaceholder": "按名称或ID搜索配置...",
+    "all": "全部",
+    "table": {
+      "id": "ID",
+      "importedAt": "导入时间",
+      "name": "配置名称",
+      "platform": "平台",
+      "accountStatus": "账户健康度",
+      "status": "状态",
+      "actions": "操作",
+      "account": "账号",
+      "email": "邮箱",
+      "password": "密码",
+      "twofa": "2FA",
+      "notes": "备注",
+      "country": "国家",
+      "bmId": "BM",
+      "pages": "Page",
+      "adAccounts": "广告号",
+      "payment": "支付"
+    },
+    "actions": {
+      "launch": "启动浏览器",
+      "launchLocal": "启动本地浏览器实例",
+      "stop": "停止浏览器",
+      "edit": "编辑配置"
+    },
+    "batch": {
+      "selected": "已选",
+      "launch": "批量启动",
+      "stop": "批量停止",
+      "checkStatus": "检查状态",
+      "delete": "批量删除",
+      "deleteConfirm": "确定要删除 {{count}} 个配置吗？",
+      "checkComplete": "已完成所选配置的状态检查。",
+      "moreActions": "更多操作",
+      "relogin": "批量重登",
+      "getInfo": "获取信息",
+      "createPage": "创建 Page",
+      "createBM": "创建BM",
+      "createAdAccount": "创建广告号",
+      "changeCurrencyTimezone": "更改货币/时区",
+      "addPayment": "添加支付",
+      "topUp": "充值",
+      "actionInitiated": "已为 {{count}} 个配置启动 “{{action}}” 操作。",
+      "getInfoComplete": "已成功更新 {{count}} 个配置的信息。"
+    }
+  },
+  "importWizard": {
+    "title": "Excel 导入向导",
+    "dragDrop": "点击或拖拽文件上传",
+    "supportedFormats": "支持 .xlsx, .xls, .csv 格式",
+    "mappingHint": "我们已自动尝试匹配列名。请检查并在需要时手动调整。",
+    "previewHint": "已准备导入 {{count}} 条数据。请预览前5行。",
+    "steps": {
+        "upload": "步骤 1: 上传文件",
+        "map": "步骤 2: 字段映射",
+        "preview": "步骤 3: 预览与确认"
+    },
+    "fields": {
+        "name": "配置名称",
+        "platform": "平台",
+        "ipAddress": "显示 IP",
+        "cookiesCount": "Cookies 计数",
+        "group": "分组",
+        "status": "状态",
+        "accountStatus": "账户状态",
+        "userAgent": "User Agent",
+        "notes": "备注",
+        "tags": "标签",
+        "owner": "所有者",
+        "os": "操作系统",
+        "resolution": "分辨率",
+        "timezone": "时区",
+        "language": "语言",
+        "proxyType": "代理类型",
+        "proxyHost": "代理主机 (IP)",
+        "proxyPort": "代理端口",
+        "proxyUsername": "代理账号",
+        "proxyPassword": "代理密码",
+        "accountName": "账户名称",
+        "accountEmail": "账户邮箱",
+        "accountPassword": "账户密码",
+        "2FA": "2FA 密钥",
+        "cookies": "Cookies 数据",
+        "startupUrls": "启动 URLs",
+        "bmId": "BM",
+        "currency": "货币",
+        "country": "国家",
+        "paymentStatus": "支付状态",
+        "pages": "Page 数量",
+        "adAccounts": "广告账户数"
+    },
+    "ignore": "--- 忽略 ---",
+    "cancel": "取消",
+    "back": "上一步",
+    "next": "下一步",
+    "finish": "完成导入"
+  },
+  "adAutomation": {
+    "title": "广告自动化",
+    "subtitle": "使用 Gemini 生成高转化文案并发布到官方 API。",
+    "generationError": "生成文本时出错。请检查控制台/API 密钥。",
+    "labels": {
+      "platform": "目标平台",
+      "productName": "产品名称",
+      "productDetails": "产品详情 / 卖点",
+      "tone": "语气风格"
+    },
+    "placeholders": {
+      "productName": "例如：超级舒适运动鞋",
+      "productDetails": "描述主要功能、目标受众和优点..."
+    },
+    "tones": {
+      "PersuasiveandUrgent": "有说服力且紧急",
+      "FriendlyandCasual": "友好休闲",
+      "ProfessionalandAuthoritative": "专业权威",
+      "LuxuryandElegant": "奢华优雅",
+      "ViralGen-ZStyle": "病毒式 / Z世代风格"
+    },
+    "generateButton": "生成广告内容",
+    "previewTitle": "生成内容预览",
+    "previewPlaceholder": "内容将显示在此处...",
+    "accountLabel": "账户",
+    "publishButton": "发布到 API",
+    "publishSuccess": "已成功将广告活动发布到 {{platform}} API。",
+    "publishError": "API 错误：预算或目标配置无效。"
+  },
+  "settings": {
+    "unavailable": {
+      "title": "设置不可用",
+      "description": "API 配置和系统偏好设置即将推出。"
+    }
+  },
+  "domainManager": {
+    "title": "域名管理",
+    "subtitle": "连接第三方域名API以查看列表并批量分组。",
+    "purchase": "购买域名",
+    "apiLabel": "域名API地址",
+    "apiPlaceholder": "例如：https://api.example.com",
+    "saveApi": "保存API",
+    "refresh": "刷新列表",
+    "loading": "正在加载...",
+    "listEmpty": "暂无域名数据",
+    "fetchError": "获取域名列表失败",
+    "table": {
+      "id": "ID",
+      "domain": "域名",
+      "status": "状态",
+      "group": "分组"
+    },
+    "batch": {
+      "selected": "已选",
+      "groupPlaceholder": "输入分组名称",
+      "assignGroup": "批量分组"
+    }
+  },
+  "profileCreator": {
+    "title": "创建新配置",
+    "subtitle": "为您的操作配置独特的浏览器环境。",
+    "editTitle": "编辑配置",
+    "editSubtitle": "更新此浏览器环境的配置。",
+    "backButton": "返回配置列表",
+    "createButton": "创建配置",
+    "saveButton": "保存更改",
+    "cancelButton": "取消",
+    "currentUser": "当前用户",
+    "random": "随机",
+    "sections": {
+      "basic": {
+        "title": "基本信息",
+        "batchCount": {
+          "label": "批量创建数量",
+          "helper": "一次最多可创建 100 个配置。"
+        },
+        "profileName": {
+          "label": "配置名称",
+          "placeholder": "输入配置名称",
+          "helper": "ID 和名称后缀将自动分配。"
+        }
+      },
+      "grouping": {
+        "title": "分组和标签",
+        "group": { "label": "分组", "helper": "分配到新的或现有的分组以便于组织。" },
+        "tags": { "label": "标签", "helper": "例如：facebook, ads, test (用逗号分隔)。" },
+        "owner": { "label": "所有者", "helper": "默认为当前用户；管理员可以更改。" }
+      },
+      "fingerprint": {
+        "title": "浏览器指纹",
+        "os": { "label": "操作系统" },
+        "userAgent": { "label": "User Agent", "helper": "根据所选操作系统生成随机 UA。" },
+        "resolution": { "label": "屏幕分辨率" },
+        "timezone": { "label": "时区" },
+        "language": { "label": "语言" }
+      },
+      "protection": {
+        "title": "指纹保护",
+        "canvas": "Canvas 指纹",
+        "webgl": "WebGL 指纹",
+        "audio": "音频指纹"
+      },
+      "proxy": {
+        "title": "代理设置",
+        "enable": "启用代理",
+        "type": { "label": "代理类型" },
+        "host": { "label": "主机", "helper": "您可以在此处粘贴完整的代理字符串 (例如：host:port:user:pass)。" },
+        "port": { "label": "端口" },
+        "username": { "label": "用户名 (可选)" },
+        "password": { "label": "密码 (可选)" }
+      },
+      "startup": {
+        "title": "启动网站",
+        "custom": { "label": "自定义网站 URL", "helper": "每行一个 URL。" }
+      },
+      "account": {
+        "title": "账户信息",
+        "name": { "label": "账户名称", "helper": "用于登录的用户名或账户名。" },
+        "email": { "label": "电子邮箱地址" },
+        "password": { "label": "账户密码" },
+        "twoFactor": { "label": "2FA 密钥", "helper": "TOTP 密钥或备用代码。" },
+        "cookies": { "label": "Cookie 数据", "helper": "粘贴 JSON 或 Netscape 格式的 cookies。" }
+      },
+      "notes": {
+        "title": "备注",
+        "remarks": { "label": "备注", "placeholder": "记录其他重要信息或笔记..." }
+      }
+    }
+  },
+  "assetViewer": {
+    "titlePages": "Meta Page",
+    "subtitlePages": "查看和管理您所有账号中的 Facebook Page。",
+    "titleBMs": "Meta 商务管理平台",
+    "subtitleBMs": "所有商务管理平台 (BM) 及其状态概览。",
+    "titleAdAccounts": "Meta 广告账户",
+    "subtitleAdAccounts": "监控您账号关联的所有广告账户。",
+    "noAssets": "在您的账号中未找到此类资产。",
+    "table": {
+        "id": "ID",
+        "profileName": "账号名称",
+        "pageName": "Page 名称",
+        "pageId": "Page ID",
+        "pageLikes": "点赞数",
+        "pageStatus": "状态",
+            "bmId": "BM",
+        "bmStatus": "BM 状态",
+        "payment": "支付",
+        "adAccountId": "广告账户 ID",
+        "adAccountStatus": "状态",
+        "adAccountSpend": "花费 (USD)",
+        "adAccountLimit": "额度 (USD)",
+        "adAccountName": "广告账户名称",
+        "adAccountActions": "操作",
+        "adAccountAccount": "账号",
+        "adAccountAdsCount": "广告数量",
+        "adAccountBalance": "账单",
+        "adAccountThreshold": "门槛",
+        "adAccountPagesCount": "Page",
+        "adAccountBmCount": "关联BM数量",
+        "adAccountPaymentCount": "卡片",
+        "adAccountCountry": "国家",
+        "adAccountCurrency": "货币",
+        "adAccountTimezone": "时区"
+    },
+    "status": {
+        "published": "已发布",
+        "unpublished": "未发布",
+        "active": "正常",
+        "restricted": "受限",
+        "ban": "已封禁",
+        "inReview": "审核中",
+        "disabled": "已禁用",
+        "verified": "已认证",
+        "notVerified": "未认证"
+    },
+    "batch": {
+      "selected": "已选",
+      "delete": "删除",
+      "deleteConfirm": "您确定要删除 {{count}} 个选定资产吗？",
+      "publish": "发布",
+      "unpublish": "取消发布",
+      "checkStatus": "检查状态",
+      "addPayment": "添加支付",
+      "enable": "启用",
+      "disable": "禁用",
+      "checkSpend": "检查花费",
+      "actionInitiated": "已为 {{count}} 个资产启动 “{{action}}” 操作。"
+    },
+    "publish": {
+      "title": "发布广告",
+      "close": "关闭",
+      "selectedAccounts": "选中广告账户",
+      "fields": {
+        "campaignName": "Campaign 名称",
+        "adName": "Ad 名称",
+        "link": "链接 URL",
+        "imageUrl": "图片 URL",
+        "headline": "标题",
+        "description": "描述",
+        "pageId": "页面 ID (可选)",
+        "objective": "投放目标",
+        "dailyBudget": "每日预算 USD",
+        "cta": "CTA",
+        "placements": "版位 (逗号分隔)",
+        "pixelId": "像素 ID (可选)",
+        "ageMin": "年龄下限",
+        "ageMax": "年龄上限",
+        "genders": "性别 (male/female/all)",
+        "locations": "地域 (国家/地区代码，逗号分隔)",
+        "interests": "兴趣关键词 (逗号分隔)",
+        "text": "广告文案",
+        "concurrency": "并发数"
+      },
+      "objectiveOptions": { "LINK_CLICKS": "LINK_CLICKS", "CONVERSIONS": "CONVERSIONS", "REACH": "REACH" },
+      "ctaOptions": { "LEARN_MORE": "LEARN_MORE", "SHOP_NOW": "SHOP_NOW", "APPLY_NOW": "APPLY_NOW" },
+      "actions": { "cancel": "取消", "submit": "发布", "fetchPages": "拉取页面", "saveTemplate": "保存模板", "applyTemplate": "应用模板", "deleteTemplate": "删除模板" },
+      "status": { "posting": "发布中…", "submitted": "已提交", "pagesLoading": "页面加载中…", "progress": "发布进度", "noPages": "未检测到可用页面" },
+      "validation": { "missing": "请填写必填项：链接、文案、标题，且预算>0" },
+      "errors": { "failedCount": "失败数量", "failedListTitle": "失败账户列表", "publishFailed": "发布失败" },
+      "preview": { "title": "创意预览", "headline": "(标题)", "description": "(描述)", "imageUrl": "(图片 URL)" },
+      "placeholders": { "selectTemplate": "选择模板", "templateName": "模板名称" },
+      "actionsEx": { "copyFailed": "复制失败清单" }
+    }
+  }
+  ,
+  "payment": {
+    "title": "支付卡片",
+    "subtitle": "管理本地保存的支付卡片并可同步到数据库。",
+    "actions": {
+      "new": "新建卡片",
+      "import": "导入",
+      "export": "导出",
+      "apiSettings": "接口设置",
+      "search": "搜索持卡人/提供方/标签/卡号/后四位/CVV/卡组织",
+      "edit": "编辑",
+      "save": "保存",
+      "deleteSelected": "删除已选"
+    },
+    "view": {
+      "grid": "卡片",
+      "list": "列表"
+    },
+    "fields": {
+      "holder": "持卡人",
+      "provider": "提供方",
+      "balance": "余额",
+      "limit": "额度",
+      "expiry": "到期",
+      "cvv": "CVV",
+      "cardNumber": "卡号",
+      "tags": "标签"
+    },
+    "list": {
+      "selected": "已选",
+      "noData": "暂无卡片"
+    },
+    "table": {
+      "last4": "后四位",
+      "network": "卡组织",
+      "profile": "配置",
+      "account": "广告账户",
+      "actions": "操作"
+    },
+    "create": {
+      "cancel": "取消",
+      "create": "创建"
+    },
+    "import": {
+      "hint": "支持从 JSON/CSV/XLSX/XLS 文件导入卡片。",
+      "pasteJson": "粘贴 JSON 内容"
+    },
+    "api": {
+      "baseUrl": "存储服务地址",
+      "apiKey": "API 密钥",
+      "test": "测试",
+      "ok": "可用",
+      "fail": "不可用",
+      "save": "保存"
+    }
+  },
+  "ads": {
+    "toolbar": {
+      "accountLabel": "广告账户",
+      "fetchAds": "拉取广告",
+      "backToAccounts": "返回广告账户",
+      "export": "导出广告"
+    },
+    "batch": {
+      "selected": "已选",
+      "activate": "启用",
+      "pause": "暂停",
+      "delete": "删除",
+      "openManager": "打开广告管理器",
+      "exportSelected": "导出所选"
+    },
+    "filters": {
+      "searchPlaceholder": "按ID/名称/状态搜索...",
+      "status": {
+        "all": "全部",
+        "ACTIVE": "ACTIVE",
+        "PAUSED": "PAUSED",
+        "DELETED": "DELETED",
+        "ARCHIVED": "ARCHIVED",
+        "IN_PROCESS": "IN_PROCESS"
+      }
+    },
+    "table": {
+      "id": "广告ID",
+      "name": "名称",
+      "status": "状态",
+      "adset": "广告组ID",
+      "adsetName": "广告组名称",
+      "campaign": "推广系列ID",
+      "campaignName": "推广系列名称",
+      "created": "创建时间",
+      "preview": "预览",
+      "actions": "操作"
+    },
+    "actions": {
+      "manage": "管理"
+    },
+    "empty": "暂无广告"
+  }
+}

@@ -1,0 +1,14 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "omnifingerprint-admanager"
+compatibility_date = "2024-04-25"
+pages_build_output_dir = "dist"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "omnifingerprint-db"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+
+[vars]
+LAUNCH_SERVER_URL = "http://localhost:9999"
+PUPPETEER_API_SECRET = "REPLACE_WITH_YOUR_SECRET"
+DEEPSEEK_API_KEY = "REPLACE_WITH_YOUR_DEEPSEEK_API_KEY"

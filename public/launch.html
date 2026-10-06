@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OmniFingerprint Launcher</title>
+    <script>
+      (function(){
+        try {
+          var params = new URLSearchParams(location.search);
+          var seq = params.get('seq') || '';
+          if (seq) {
+            var prefix = '[' + seq + '] ';
+            if (!document.title.startsWith(prefix)) {
+              document.title = prefix + document.title;
+            }
+          }
+        } catch(e) {}
+      })();
+    </script>
+    <style>
+      body { background:#0f172a; color:#e5e7eb; font-family: system-ui, sans-serif; padding:2rem; }
+      .wrap { max-width: 720px; margin: 0 auto; }
+      code { background:#111827; padding:0.2rem 0.4rem; border-radius:0.25rem; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>本地隔离浏览器启动页</h1>
+      <p>已为当前窗口注入标题序号；可继续打开目标站点标签进行联调。</p>
+    </div>
+  </body>
+</html>

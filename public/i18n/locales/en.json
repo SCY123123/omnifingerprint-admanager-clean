@@ -1,0 +1,358 @@
+{
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "automation": "Ad Automation",
+    "adTemplates": "Ad Templates",
+    "settings": "Settings",
+    "signOut": "Sign Out",
+    "platforms": "Platforms",
+    "proxyNav": "IP Proxy Manager",
+    "meta": {
+      "profiles": "Profiles",
+      "pages": "Pages",
+      "bms": "Business Managers",
+      "adAccounts": "Ad Accounts"
+    }
+  },
+  "proxyNav": {
+    "title": "Proxy Navigation",
+    "subtitle": "View current target and test connectivity via the dev proxy.",
+    "currentTarget": "Current Target",
+    "test": "Test Connectivity",
+    "statusOnline": "Online",
+    "statusOffline": "Offline",
+    "statusUnknown": "Unknown",
+    "help": "Set NAV_PROXY_TARGET in your .env to configure the dev proxy."
+  },
+  "dashboard": {
+    "title": "Overview",
+    "subtitle": "Real-time system metrics and ad performance.",
+    "totalProfiles": "Total Profiles",
+    "activeSpend": "Active Ad Spend",
+    "activeCampaigns": "Active Campaigns",
+    "avgROI": "Avg. ROI",
+    "fromLastMonth": "from last month",
+    "trafficSpendTrends": "Traffic & Spend Trends",
+    "conversionBreakdown": "Conversion Breakdown"
+  },
+  "status": {
+    "unnamed": "Unnamed",
+    "unknownError": "Unknown Error",
+    "active": "Active",
+    "restricted": "Restricted",
+    "disabled": "Disabled",
+    "review": "In Review",
+    "unknown": "Unknown",
+    "payment": {
+        "active": "Active",
+        "failed": "Failed",
+        "none": "None"
+    }
+  },
+  "profileManager": {
+    "title": "Browser Profiles",
+    "subtitle": "Manage unique digital fingerprints for multi-account operations.",
+    "import": "Import",
+    "export": "Export Excel",
+    "newProfile": "New Profile",
+    "importSuccess": "Successfully imported {{count}} profiles.",
+    "searchPlaceholder": "Search profiles by name or ID...",
+    "all": "All",
+    "table": {
+      "id": "#",
+      "name": "Profile Name",
+      "platform": "Platform",
+      "accountStatus": "Account Health",
+      "status": "Status",
+      "actions": "Actions",
+      "account": "Account",
+      "email": "Email",
+      "password": "Password",
+      "twofa": "2FA",
+      "notes": "Notes",
+      "country": "Country",
+      "bmId": "BM ID",
+      "pages": "Pages",
+      "adAccounts": "Ad Accts",
+      "payment": "Payment"
+    },
+    "actions": {
+      "launch": "Launch Browser",
+      "launchLocal": "Launch local browser instance",
+      "stop": "Stop Browser",
+      "edit": "Edit Profile"
+    },
+    "batch": {
+      "selected": "Selected",
+      "launch": "Launch",
+      "stop": "Stop",
+      "checkStatus": "Check Status",
+      "delete": "Delete",
+      "deleteConfirm": "Are you sure you want to delete {{count}} profiles?",
+      "checkComplete": "Status check completed for selected profiles.",
+      "moreActions": "More Actions",
+      "relogin": "Re-login",
+      "getInfo": "Get Info",
+      "createPage": "Create Page",
+      "createBM": "Create BM",
+      "createAdAccount": "Create Ad Account",
+      "changeCurrencyTimezone": "Change Currency/Timezone",
+      "addPayment": "Add Payment",
+      "topUp": "Top Up",
+      "actionInitiated": "{{action}} initiated for {{count}} profiles.",
+      "getInfoComplete": "Successfully updated information for {{count}} profiles."
+    }
+  },
+  "importWizard": {
+    "title": "Excel Import Wizard",
+    "dragDrop": "Click or Drag file to upload",
+    "supportedFormats": "Supports .xlsx, .xls, .csv formats",
+    "mappingHint": "We've automatically tried to match columns. Please review and adjust if needed.",
+    "previewHint": "Ready to import {{count}} rows. Previewing first 5 rows below.",
+    "steps": {
+        "upload": "Step 1: Upload",
+        "map": "Step 2: Map Fields",
+        "preview": "Step 3: Preview"
+    },
+    "fields": {
+        "name": "Profile Name",
+        "platform": "Platform",
+        "ipAddress": "Display IP",
+        "cookiesCount": "Cookies Count",
+        "group": "Group",
+        "status": "Status",
+        "accountStatus": "Account Status",
+        "userAgent": "User Agent",
+        "notes": "Notes",
+        "tags": "Tags",
+        "owner": "Owner",
+        "os": "OS",
+        "resolution": "Resolution",
+        "timezone": "Timezone",
+        "language": "Language",
+        "proxyType": "Proxy Type",
+        "proxyHost": "Proxy Host",
+        "proxyPort": "Proxy Port",
+        "proxyUsername": "Proxy Username",
+        "proxyPassword": "Proxy Password",
+        "accountName": "Account Name",
+        "accountEmail": "Account Email",
+        "accountPassword": "Account Password",
+        "2FA": "2FA Secret",
+        "cookies": "Cookies Data",
+        "startupUrls": "Startup URLs",
+        "bmId": "BM ID",
+        "currency": "Currency",
+        "country": "Country",
+        "paymentStatus": "Payment Status",
+        "pages": "Pages Count",
+        "adAccounts": "Ad Accounts Count"
+    },
+    "ignore": "--- Ignore ---",
+    "cancel": "Cancel",
+    "back": "Back",
+    "next": "Next",
+    "finish": "Finish Import"
+  },
+  "adAutomation": {
+    "title": "Ad Automation",
+    "subtitle": "Generate high-converting copy with Gemini and publish to official APIs.",
+    "generationError": "Error generating text. Please check console/api key.",
+    "labels": {
+      "platform": "Target Platform",
+      "productName": "Product Name",
+      "productDetails": "Product Details / USP",
+      "tone": "Tone of Voice"
+    },
+    "placeholders": {
+      "productName": "e.g., UltraComfort Sneakers",
+      "productDetails": "Describe the key features, target audience, and benefits..."
+    },
+    "tones": {
+      "PersuasiveandUrgent": "Persuasive and Urgent",
+      "FriendlyandCasual": "Friendly and Casual",
+      "ProfessionalandAuthoritative": "Professional and Authoritative",
+      "LuxuryandElegant": "Luxury and Elegant",
+      "ViralGen-ZStyle": "Viral / Gen-Z Style"
+    },
+    "generateButton": "Generate Ad Content",
+    "previewTitle": "Generated Content Preview",
+    "previewPlaceholder": "Content will appear here...",
+    "accountLabel": "Account",
+    "publishButton": "Publish to API",
+    "publishSuccess": "Successfully published campaign to {{platform}} API.",
+    "publishError": "API Error: Invalid budget or targeting configuration."
+  },
+  "settings": {
+    "unavailable": {
+      "title": "Settings Unavailable",
+      "description": "API Configuration and System preferences coming soon."
+    }
+  },
+  "profileCreator": {
+    "title": "Create New Profile",
+    "subtitle": "Configure a unique browser environment for your operations.",
+    "editTitle": "Edit Profile",
+    "editSubtitle": "Update the configuration for this browser environment.",
+    "backButton": "Back to Profiles",
+    "createButton": "Create Profile",
+    "saveButton": "Save Changes",
+    "cancelButton": "Cancel",
+    "currentUser": "Current User",
+    "random": "Random",
+    "sections": {
+      "basic": {
+        "title": "Basic Information",
+        "batchCount": {
+          "label": "Batch Create Count",
+          "helper": "Up to 100 profiles can be created at once."
+        },
+        "profileName": {
+          "label": "Profile Name",
+          "placeholder": "Enter profile name",
+          "helper": "ID and name suffixes will be assigned automatically."
+        }
+      },
+      "grouping": {
+        "title": "Grouping & Tags",
+        "group": { "label": "Group", "helper": "Assign to a new or existing group for organization." },
+        "tags": { "label": "Tags", "helper": "e.g., facebook, ads, test (comma-separated)." },
+        "owner": { "label": "Owner", "helper": "Default is the current user; admins can change this." }
+      },
+      "fingerprint": {
+        "title": "Browser Fingerprint",
+        "os": { "label": "Operating System" },
+        "userAgent": { "label": "User Agent", "helper": "A random UA is generated based on the selected OS." },
+        "resolution": { "label": "Screen Resolution" },
+        "timezone": { "label": "Timezone" },
+        "language": { "label": "Language" }
+      },
+      "protection": {
+        "title": "Fingerprint Protection",
+        "canvas": "Canvas Fingerprint",
+        "webgl": "WebGL Fingerprint",
+        "audio": "Audio Fingerprint"
+      },
+      "proxy": {
+        "title": "Proxy Settings",
+        "enable": "Enable Proxy",
+        "type": { "label": "Proxy Type" },
+        "host": { "label": "Host", "helper": "You can paste the full proxy string here (e.g., host:port:user:pass)." },
+        "port": { "label": "Port" },
+        "username": { "label": "Username (Optional)" },
+        "password": { "label": "Password (Optional)" }
+      },
+      "startup": {
+        "title": "Startup Websites",
+        "custom": { "label": "Custom Website URLs", "helper": "One URL per line." }
+      },
+      "account": {
+        "title": "Account Information",
+        "name": { "label": "Account Name", "helper": "Username or account name for login." },
+        "email": { "label": "Email Address" },
+        "password": { "label": "Account Password" },
+        "twoFactor": { "label": "2FA Secret", "helper": "TOTP key or backup code." },
+        "cookies": { "label": "Cookie Data", "helper": "Paste JSON or Netscape format cookies." }
+      },
+      "notes": {
+        "title": "Notes",
+        "remarks": { "label": "Remarks", "placeholder": "Record other important info or notes..." }
+      }
+    }
+  },
+   "assetViewer": {
+    "titlePages": "Meta Pages",
+    "subtitlePages": "View and manage all Facebook Pages across your profiles.",
+    "titleBMs": "Meta Business Managers",
+    "subtitleBMs": "Overview of all Business Manager accounts and their status.",
+    "titleAdAccounts": "Meta Ad Accounts",
+    "subtitleAdAccounts": "Monitor all ad accounts linked to your profiles.",
+    "noAssets": "No assets of this type found across your profiles.",
+    "table": {
+        "id": "#",
+        "profileName": "Profile Name",
+        "pageName": "Page Name",
+        "pageId": "Page ID",
+        "pageLikes": "Likes",
+        "pageStatus": "Status",
+        "bmId": "BM ID",
+        "bmStatus": "BM Status",
+        "payment": "Payment",
+        "adAccountId": "Ad Account ID",
+        "adAccountStatus": "Status",
+        "adAccountSpend": "Spend (USD)",
+        "adAccountLimit": "Limit (USD)",
+        "adAccountName": "Ad Account Name",
+        "adAccountActions": "Actions",
+        "adAccountAccount": "Account",
+        "adAccountAdsCount": "Ads Count",
+        "adAccountBalance": "Balance",
+        "adAccountThreshold": "Threshold",
+        "adAccountPagesCount": "Pages",
+        "adAccountBmCount": "BMs Count",
+        "adAccountPaymentCount": "Cards",
+        "adAccountCountry": "Country",
+        "adAccountCurrency": "Currency",
+        "adAccountTimezone": "Timezone"
+    },
+    "status": {
+        "published": "Published",
+        "unpublished": "Unpublished",
+        "active": "Active",
+        "restricted": "Restricted",
+        "ban": "Banned",
+        "inReview": "In Review",
+        "disabled": "Disabled",
+        "verified": "Verified",
+        "notVerified": "Not Verified"
+    },
+    "batch": {
+      "selected": "Selected",
+      "delete": "Delete",
+      "deleteConfirm": "Are you sure you want to delete {{count}} selected assets?",
+      "publish": "Publish",
+      "unpublish": "Unpublish",
+      "checkStatus": "Check Status",
+      "addPayment": "Add Payment",
+      "enable": "Enable",
+      "disable": "Disable",
+      "checkSpend": "Check Spend",
+      "actionInitiated": "{{action}} initiated for {{count}} assets."
+    },
+    "publish": {
+      "title": "Publish Ads",
+      "close": "Close",
+      "selectedAccounts": "Selected Accounts",
+      "fields": {
+        "campaignName": "Campaign Name",
+        "adName": "Ad Name",
+        "link": "Link URL",
+        "imageUrl": "Image URL",
+        "headline": "Headline",
+        "description": "Description",
+        "pageId": "Page ID (Optional)",
+        "objective": "Objective",
+        "dailyBudget": "Daily Budget USD",
+        "cta": "CTA",
+        "placements": "Placements (comma-separated)",
+        "pixelId": "Pixel ID (Optional)",
+        "ageMin": "Min Age",
+        "ageMax": "Max Age",
+        "genders": "Genders (male/female/all)",
+        "locations": "Locations (Country/Region codes, comma-separated)",
+        "interests": "Interests (comma-separated)",
+        "text": "Ad Text",
+        "concurrency": "Concurrency"
+      },
+      "objectiveOptions": { "LINK_CLICKS": "LINK_CLICKS", "CONVERSIONS": "CONVERSIONS", "REACH": "REACH" },
+      "ctaOptions": { "LEARN_MORE": "LEARN_MORE", "SHOP_NOW": "SHOP_NOW", "APPLY_NOW": "APPLY_NOW" },
+      "actions": { "cancel": "Cancel", "submit": "Publish", "fetchPages": "Fetch Pages", "saveTemplate": "Save Template", "applyTemplate": "Apply Template", "deleteTemplate": "Delete Template" },
+      "status": { "posting": "Publishing...", "submitted": "Submitted", "pagesLoading": "Loading Pages...", "progress": "Publish Progress", "noPages": "No pages detected" },
+      "validation": { "missing": "Please fill required fields: link, text, headline, and budget > 0" },
+      "errors": { "failedCount": "Failed Count", "failedListTitle": "Failed Accounts", "publishFailed": "Publish Failed" },
+      "preview": { "title": "Creative Preview", "headline": "(Headline)", "description": "(Description)", "imageUrl": "(Image URL)" },
+      "placeholders": { "selectTemplate": "Select Template", "templateName": "Template Name" },
+      "actionsEx": { "copyFailed": "Copy Failed List" }
+    }
+  }
+}

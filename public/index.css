@@ -1,0 +1,4 @@
+/* Basic global styles to silence missing index.css */
+:root { color-scheme: dark; }
+html, body, #root { height: 100%; }
+body { margin: 0; }

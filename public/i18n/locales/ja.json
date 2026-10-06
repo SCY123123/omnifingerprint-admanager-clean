@@ -1,0 +1,273 @@
+
+{
+  "sidebar": {
+    "dashboard": "ダッシュボード",
+    "automation": "広告自動化",
+    "proxyNav": "プロキシナビ",
+    "payment": "支払い",
+    "settings": "設定",
+    "signOut": "ログアウト",
+    "platforms": "プラットフォーム",
+    "cloudflare": "Cloudflare",
+    "meta": {
+      "profiles": "プロファイル",
+      "pages": "ページ",
+      "bms": "ビジネス マネージャ",
+      "adAccounts": "広告アカウント"
+    }
+  },
+  "proxyNav": {
+    "title": "プロキシナビ",
+    "subtitle": "現在のターゲットを確認し、開発用プロキシで接続性をテスト",
+    "currentTarget": "現在のターゲット",
+    "test": "接続テスト",
+    "statusOnline": "オンライン",
+    "statusOffline": "オフライン",
+    "statusUnknown": "不明",
+    "help": ".env の NAV_PROXY_TARGET を設定して開発用プロキシを構成"
+  },
+  "cloudflare": {
+    "main": { "title": "Cloudflare", "subtitle": "Cloudflare アカウント管理と API テスト", "openConsole": "コンソールを開く" },
+    "add": { "panelTitle": "資格情報を追加", "labels": { "username": "ユーザー名", "email": "メール", "password": "パスワード", "apiKey": "API Key" }, "actions": { "save": "保存" }, "validationEnterUsernameOrEmail": "ユーザー名またはメールを入力" },
+    "list": { "panelTitle": "アカウント一覧", "actions": { "refresh": "更新", "testApi": "API テスト" }, "empty": "Cloudflare アカウントなし", "table": { "name": "名前", "email": "メール", "apiKey": "API Key", "actions": "操作" }, "status": { "tokenSet": "設定済み" } },
+    "zones": { "title": "Zones", "accountPrefix": "アカウント", "empty": "Zones なし" }
+  },
+  "dashboard": {
+    "title": "概要",
+    "subtitle": "リアルタイムのシステムメトリクスと広告パフォーマンス。",
+    "totalProfiles": "総プロファイル数",
+    "activeSpend": "有効な広告費",
+    "activeCampaigns": "有効なキャンペーン",
+    "avgROI": "平均ROI",
+    "fromLastMonth": "前月比",
+    "trafficSpendTrends": "トラフィックと支出のトレンド",
+    "conversionBreakdown": "コンバージョン内訳"
+  },
+  "status": {
+    "active": "有効",
+    "restricted": "制限あり",
+    "disabled": "無効",
+    "review": "審査中",
+    "unknown": "不明",
+    "payment": {
+      "active": "有効",
+      "failed": "失敗",
+      "none": "なし"
+    }
+  },
+  "profileManager": {
+    "title": "ブラウザプロファイル",
+    "subtitle": "マルチアカウント運用のためのユニークなデジタルフィンガープリントを管理します。",
+    "import": "インポート",
+    "export": "Excelをエクスポート",
+    "newProfile": "新しいプロファイル",
+    "importSuccess": "{{count}}個のプロファイルを正常にインポートしました。",
+    "searchPlaceholder": "名前またはIDでプロファイルを検索...",
+    "all": "すべて",
+    "table": {
+      "id": "番号",
+      "name": "プロファイル名",
+      "platform": "プラットフォーム",
+      "accountStatus": "アカウントの状態",
+      "status": "ステータス",
+      "actions": "アクション",
+      "account": "アカウント",
+      "email": "メール",
+      "password": "パスワード",
+      "twofa": "2FA",
+      "notes": "メモ",
+      "country": "国",
+      "bmId": "BM ID",
+      "pages": "ページ",
+      "adAccounts": "広告アカ",
+      "payment": "支払い"
+    },
+    "actions": {
+      "launch": "ブラウザを起動",
+      "launchLocal": "ローカルブラウザインスタンスを起動",
+      "stop": "ブラウザを停止",
+      "edit": "プロファイルを編集"
+    },
+    "batch": {
+      "selected": "選択済み",
+      "launch": "起動",
+      "stop": "停止",
+      "checkStatus": "ステータス確認",
+      "delete": "削除",
+      "deleteConfirm": "{{count}}個のプロファイルを削除してもよろしいですか？",
+      "checkComplete": "選択したプロファイルのステータス確認が完了しました。",
+      "moreActions": "その他のアクション",
+      "relogin": "再ログイン",
+      "getInfo": "情報取得",
+      "createPage": "ページ作成",
+      "createBM": "BM作成",
+      "createAdAccount": "広告アカウント作成",
+      "changeCurrencyTimezone": "通貨/タイムゾーン変更",
+      "addPayment": "支払い方法追加",
+      "topUp": "チャージ",
+      "actionInitiated": "{{count}}個のプロファイルに対して「{{action}}」が開始されました。",
+      "getInfoComplete": "{{count}}個のプロファイルの情報を正常に更新しました。"
+    }
+  },
+  "adAutomation": {
+    "title": "広告自動化",
+    "subtitle": "Geminiでコンバージョン率の高いコピーを生成し、公式APIに公開します。",
+    "generationError": "テキストの生成中にエラーが発生しました。コンソール/APIキーを確認してください。",
+    "labels": {
+      "platform": "ターゲットプラットフォーム",
+      "productName": "製品名",
+      "productDetails": "製品詳細 / USP",
+      "tone": "トーン＆マナー"
+    },
+    "placeholders": {
+      "productName": "例：ウルトラコンフォートスニーカー",
+      "productDetails": "主な機能、ターゲットオーディエンス、利点を説明してください..."
+    },
+    "tones": {
+      "PersuasiveandUrgent": "説得力と緊急性",
+      "FriendlyandCasual": "フレンドリーでカジュアル",
+      "ProfessionalandAuthoritative": "プロフェッショナルで権威的",
+      "LuxuryandElegant": "豪華でエレガント",
+      "ViralGen-ZStyle": "バイラル / Z世代スタイル"
+    },
+    "generateButton": "広告コンテンツを生成",
+    "previewTitle": "生成されたコンテンツのプレビュー",
+    "previewPlaceholder": "コンテンツはここに表示されます...",
+    "accountLabel": "アカウント",
+    "publishButton": "APIに公開",
+    "publishSuccess": "キャンペーンを{{platform}} APIに正常に公開しました。",
+    "publishError": "APIエラー：無効な予算またはターゲティング設定です。"
+  },
+  "settings": {
+    "unavailable": {
+      "title": "設定は利用できません",
+      "description": "API構成とシステム設定は近日公開予定です。"
+    }
+  },
+  "profileCreator": {
+    "title": "新しいプロファイルを作成",
+    "subtitle": "運用のための一意のブラウザ環境を構成します。",
+    "editTitle": "プロファイルを編集",
+    "editSubtitle": "このブラウザ環境の構成を更新します。",
+    "backButton": "プロファイルに戻る",
+    "createButton": "プロファイルを作成",
+    "saveButton": "変更を保存",
+    "cancelButton": "キャンセル",
+    "currentUser": "現在のユーザー",
+    "random": "ランダム",
+    "sections": {
+      "basic": {
+        "title": "基本情報",
+        "batchCount": {
+          "label": "一括作成数",
+          "helper": "一度に最大100個のプロファイルを作成できます。"
+        },
+        "profileName": {
+          "label": "プロファイル名",
+          "placeholder": "プロファイル名を入力",
+          "helper": "IDと名前のサフィックスは自動的に割り当てられます。"
+        }
+      },
+      "grouping": {
+        "title": "グルーピングとタグ",
+        "group": { "label": "グループ", "helper": "整理のために新規または既存のグループに割り当てます。" },
+        "tags": { "label": "タグ", "helper": "例：facebook, ads, test (カンマ区切り)。" },
+        "owner": { "label": "所有者", "helper": "デフォルトは現在のユーザーです。管理者はこれを変更できます。" }
+      },
+      "fingerprint": {
+        "title": "ブラウザフィンガープリント",
+        "os": { "label": "オペレーティングシステム" },
+        "userAgent": { "label": "ユーザーエージェント", "helper": "選択したOSに基づいてランダムなUAが生成されます。" },
+        "resolution": { "label": "画面解像度" },
+        "timezone": { "label": "タイムゾーン" },
+        "language": { "label": "言語" }
+      },
+      "protection": {
+        "title": "フィンガープリント保護",
+        "canvas": "Canvasフィンガープリント",
+        "webgl": "WebGLフィンガープリント",
+        "audio": "オーディオフィンガープリント"
+      },
+      "proxy": {
+        "title": "プロキシ設定",
+        "enable": "プロキシを有効にする",
+        "type": { "label": "プロキシタイプ" },
+        "host": { "label": "ホスト", "helper": "ここに完全なプロキシ文字列を貼り付けることができます（例：host:port:user:pass）。" },
+        "port": { "label": "ポート" },
+        "username": { "label": "ユーザー名（任意）" },
+        "password": { "label": "パスワード（任意）" }
+      },
+      "startup": {
+        "title": "起動ウェブサイト",
+        "custom": { "label": "カスタムウェブサイトURL", "helper": "1行に1つのURL。" }
+      },
+      "account": {
+        "title": "アカウント情報",
+        "name": { "label": "アカウント名", "helper": "ログイン用のユーザー名。" },
+        "email": { "label": "メールアドレス" },
+        "password": { "label": "アカウントのパスワード" },
+        "twoFactor": { "label": "2FAシークレット", "helper": "TOTPキーまたはバックアップコード。" },
+        "cookies": { "label": "クッキーデータ", "helper": "JSONまたはNetscape形式のクッキーを貼り付けます。" }
+      },
+      "notes": {
+        "title": "メモ",
+        "remarks": { "label": "備考", "placeholder": "その他の重要な情報やメモを記録してください..." }
+      }
+    }
+  },
+  "assetViewer": {
+    "titlePages": "Meta ページ",
+    "subtitlePages": "すべてのプロファイルにわたるFacebookページを表示および管理します。",
+    "titleBMs": "Meta ビジネス マネージャ",
+    "subtitleBMs": "すべてのビジネス マネージャ アカウントとそのステータスの概要。",
+    "titleAdAccounts": "Meta 広告アカウント",
+    "subtitleAdAccounts": "プロファイルにリンクされているすべての広告アカウントを監視します。",
+    "noAssets": "このタイプのアセットはプロファイル全体で見つかりませんでした。",
+    "table": {
+        "id": "番号",
+        "profileName": "プロファイル名",
+        "pageName": "ページ名",
+        "pageId": "ページID",
+        "pageLikes": "いいね！",
+        "pageStatus": "ステータス",
+        "bmId": "BM ID",
+        "bmStatus": "BMステータス",
+        "payment": "支払い",
+        "adAccountId": "広告アカウントID",
+        "adAccountStatus": "ステータス",
+        "adAccountSpend": "費用 (USD)"
+    },
+    "status": {
+        "published": "公開済み",
+        "unpublished": "未公開",
+        "active": "アクティブ",
+        "restricted": "制限あり",
+        "ban": "禁止",
+        "inReview": "審査中",
+        "disabled": "無効",
+        "verified": "確認済み",
+        "notVerified": "未確認"
+    },
+    "batch": {
+      "selected": "選択済み",
+      "delete": "削除",
+      "deleteConfirm": "選択した{{count}}個のアセットを削除してもよろしいですか？",
+      "publish": "公開",
+      "unpublish": "非公開",
+      "checkStatus": "ステータス確認",
+      "addPayment": "支払い方法追加",
+      "enable": "有効化",
+      "disable": "無効化",
+      "checkSpend": "費用確認",
+      "actionInitiated": "{{count}}個のアセットに対して「{{action}}」が開始されました。"
+    }
+  }
+  ,
+  "analytics": {
+    "title": "ナビゲーション分析",
+    "empty": "データなし",
+    "error": "読み込み失敗",
+    "table": { "time": "時間", "event": "イベント", "from": "元", "to": "先", "locale": "言語" }
+  },
+  "common": { "refresh": "更新", "loading": "読み込み中..." }
+}

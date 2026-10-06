@@ -1,0 +1,41 @@
+@import "tailwindcss" source(none);
+/* ⚠️ 必须显式声明扫描范围（source(none) 关掉自动扫描）。
+   项目根目录混着 server/browser-profiles（16.9 万个 Chrome 配置文件、20GB）、
+   .wrangler 临时包、pup-client 等巨型目录，Tailwind 自动扫描会把它们逐个读成
+   候选类名文件 → 构建从十几秒变成几分钟甚至卡死。 */
+@source "../index.html";
+@source "../*.tsx";
+@source "../components/";
+@source "../src/";
+@source "../utils/";
+@source "../services/";
+
+@keyframes rowFadeSlideIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.row-fade-slide-in {
+  animation: rowFadeSlideIn 0.3s ease-out both;
+}
+/* 如需手动添加组件目录扫描，取消下行注释：
+@source "../components/";
+*/
+
+/* Project global styles can be added below if needed */
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.2);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.4);
+}

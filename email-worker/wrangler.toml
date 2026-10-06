@@ -1,0 +1,10 @@
+name = "omnifingerprint-email-handler"
+main = "src/index.js"
+compatibility_date = "2024-05-25"
+
+# 不再绑定 D1：邮件由本 Worker 转发到宝塔后端落库（MySQL），库里只留一份。
+# 见 src/index.js 顶部说明。
+#
+# 需要配置的变量（用 wrangler secret put 写入，不落在本文件里）：
+#   INGEST_URL     https://your-backend.example.com/api/private-emails/ingest
+#   INGEST_SECRET  与宝塔后端 .env 的 PUPPETEER_API_SECRET 保持一致
