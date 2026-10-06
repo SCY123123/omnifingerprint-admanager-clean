@@ -8,6 +8,10 @@ Frontend runs on React + Vite; a local PUP Server (Node.js + Puppeteer/Playwrigh
 > ⚠️ **Legal / 合规提示**: This project is for managing your own advertising accounts and automating your own workflows. You are responsible for complying with the terms of service of any platform you use it with, as well as applicable laws in your jurisdiction.
 >
 > 本项目仅用于管理自己的广告账号与自动化自己的工作流程。使用本项目时请自行遵守所操作平台的服务条款及所在地法律法规。
+>
+> **Trademarks / 商标声明**: Facebook, Meta, Instagram, TikTok, Google, Cloudflare, Mail.tm and other names mentioned in this project are trademarks of their respective owners. They are used here for identification and compatibility description only, and do not imply any affiliation, sponsorship, or endorsement.
+>
+> 本项目文档与代码中出现的 Facebook、Meta、Instagram、TikTok、Google、Cloudflare、Mail.tm 等名称，均为其各自所有者的商标，此处仅用于标识与兼容性说明，不代表任何关联、赞助或背书。
 
 ---
 

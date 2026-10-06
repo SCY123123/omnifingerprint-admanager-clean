@@ -1,5 +1,9 @@
 # 技术文档 - 创建主页功能实现
 
+> 商标声明：本文档中出现的 Facebook、TikTok、Google、Cloudflare、Mail.tm 等名称均为其各自所有者的商标，此处仅用于标识与兼容性说明，不代表任何关联、赞助或背书。
+>
+> **架构现状（更新于 2026-10）**：生产环境为「前端静态页（Nginx/宝塔）+ 云端后端 `baota-backend`（Node + MySQL）+ 本地 PUP Server（用户本机，端口 9999）+ Email Worker（转发至后端落库）」。本文档中涉及 Cloudflare D1 / Pages Functions 的内容属可选替代方案或历史设计，当前架构以 [README](../README.md) 与 [DEPLOY](../DEPLOY.md) 为准。
+
 ## 1. 系统架构
 该功能分为前端 UI 组件、后端 API 接口（云端存储服务）以及 Puppeteer 自动化脚本（本地客户端）三部分。
 
@@ -192,15 +196,16 @@
 - **原则**：同一数据库错误出现 2 次必须解决根本原因（通过自动迁移机制解决字段缺失问题）。
 
 ## 7. 部署与环境规范 (Deployment & Env Specs)
-### 7.1 前端与全栈部署 (Cloudflare Pages)
-- **架构升级**：项目已迁移至 Cloudflare Pages 全栈架构。前端托管在 Pages，后端逻辑由 Pages Functions (`functions/api/[[path]].js`) 提供。
-- **数据库**：使用 Cloudflare D1 分布式 SQL 数据库作为核心存储。
+### 7.1 前端与云端后端部署
+- **当前生产架构**：前端静态页由 Nginx（宝塔）托管；云端后端为自建 Node + MySQL 服务（`baota-backend/`），监听 `127.0.0.1:7700` 并由 Nginx 反代。
+- **数据库**：云端使用 MySQL / MariaDB（`src/db.js` 为 D1 → MySQL 兼容层）。
+- **可选方案**：Cloudflare Pages 全栈（`functions/` + D1）作为替代部署保留，`functions/api/[[path]].js` 现仅把 `/api/*` 转发到云端后端。
 - **项目实例**:
     - **Account ID**: `REPLACE_WITH_YOUR_CF_ACCOUNT_ID`
     - **Project Name**: `omnifingerprint-admanager`
     - **Production URL**: `https://your-project.pages.dev`
 - **URL 规范**：
-    - **数据库/通用 API**：使用**相对路径**（如 `/api/profiles`），由 Cloudflare Pages Functions 处理并访问 D1 数据库。
+    - **数据库/通用 API**：使用**相对路径**（如 `/api/profiles`），按部署方式由云端后端（MySQL）或 Pages Functions 处理。
     - **Puppeteer/浏览器控制**：根据用户需求，直接请求**本地地址** `http://localhost:9999/api`。这要求用户浏览器允许对本地网络的访问。
 - **CORS 与安全**：
     - 本地 Puppeteer 服务 (`puppeteer-api-server.js`) 已配置允许来自 `pages.dev` 域名的跨域请求，并启用了 `Access-Control-Allow-Private-Network` 支持。
@@ -209,13 +214,13 @@
     - `LAUNCH_SERVER_URL`: 指向用户本地运行的 Puppeteer API Server 地址。
     - `DEEPSEEK_API_KEY`: DeepSeek AI 服务的密钥。
     - `GEMINI_API_KEY`: Google Gemini AI 服务的密钥。
-- **构建配置**：`wrangler.toml` 定义了项目名称、兼容日期、输出目录及 D1 数据库绑定。
+- **构建配置**：`wrangler.toml` 仅在选用 Cloudflare Pages 方案时生效（定义项目名称、输出目录及 D1 绑定）；宝塔方案见 [DEPLOY.md](../DEPLOY.md)。
 
 ### 7.2 本地 Puppeteer 服务
 - **职责**：仅负责浏览器实例管理、指纹注入及自动化操作。
 - **部署**：必须在用户本地运行，监听 9999 端口。
 - **安全**：
-    - **云端鉴权转发**：所有控制指令必须通过 Cloudflare Pages Functions (`/api/puppeteer/*`) 转发，网关层实现了严格的 RBAC 校验，禁止越权操作他人浏览器。
+    - **直连与鉴权**：前端通过 `VITE_LAUNCH_SERVER_URL` 直连本地 PUP Server（携带 `X-Api-Secret`）；云端数据接口由 `baota-backend` 处理并执行 `user_id` RBAC 校验，禁止越权访问他人数据。
     - **API 密钥校验**：本地服务启用 `PUPPETEER_API_SECRET` 校验。所有请求必须携带 `X-Api-Secret` 响应头，否则返回 401。
     - **API 响应脱敏**：后端 `[[path]].js` 引入 `sanitizeUser` 工具函数，在返回 `GET /api/users`, `GET /api/auth/me` 及登录响应前，强制移除 `password_hash` 和内部敏感字段。
     - **越权保护 (IDOR Protection)**：
@@ -230,8 +235,8 @@
     - **PNA 支持**：本地服务配置了 `Access-Control-Allow-Private-Network` 支持，允许 HTTPS 页面访问本地 HTTP 服务。
 
 ## 8. API 代理与安全性
-- **Puppeteer 代理**：所有 `/api/puppeteer/*` 的请求被转发至 `LAUNCH_SERVER_URL`。
-- **AI 代理**：Gemini 和 DeepSeek 的 API Key 存储在 Cloudflare 环境变量中，前端通过后端接口调用，确保密钥不泄露给客户端。
+- **本地控制**：前端对浏览器的控制请求直连本地 PUP Server（`VITE_LAUNCH_SERVER_URL`，默认 `http://localhost:9999`），不经云端转发。
+- **AI 代理**：Gemini 和 DeepSeek 的 API Key 存储在云端后端环境变量中，前端通过后端接口调用，确保密钥不泄露给客户端。
 - **Graph 代理**：`/api/graph` 用于转发前端对 Facebook Graph API 的请求，绕过浏览器跨域限制。
 
 ## 9. 多级团队与 RBAC 实现
@@ -258,7 +263,7 @@
 
 ### 9.4 鉴权流程
 1. 前端登录后获取 JWT 格式 Token（包含 `id`, `username`, `role`）。
-2. Pages Functions 拦截请求，解析 Token 并提取用户信息。
+2. 云端后端拦截请求，解析 Token 并提取用户信息。
 3. 根据角色动态拼接 SQL 过滤语句。
 4. 创建资源（如 Profile）时，后端强制注入当前操作者的 `user_id`。
 
@@ -283,15 +288,15 @@
 - **组件名称**：`EmailSystem.tsx` (V4.0.9+)
 - **架构分离**：
     - 抛弃第三方 Mail.tm 等不稳定 API。
-    - **Email Worker** (`email-worker/src/index.js`) 独立部署，专门处理 Cloudflare Email Routing 触发器，解析邮件直接写入 D1 数据库。
-    - **Pages API** (`/api/private-emails/list`) 提供前端查询接口，连接至同一个 D1 数据库。
+    - **Email Worker** (`email-worker/src/index.js`) 独立部署，专门处理 Cloudflare Email Routing 触发器，将邮件 POST 至云端后端 `/api/private-emails/ingest` 落库。
+    - **后端 API** (`/api/private-emails/list`) 提供前端查询接口，读取云端后端 MySQL 的 `private_emails` 表。
     - **地址列表 API** (`/api/private-emails/addresses`)：通过 `GROUP BY address` 聚合查询，获取每个地址的 `MIN(created_at)` 作为创建时间，用于侧边栏展示。
 - **无密码体系**：通过私有域名（构建时配置的收信域名），任何地址直接接收并读取，不依赖密码验证。
 - **UI 布局优化**：
     - **三栏式架构**：UI 升级为三栏布局：左侧“地址侧边栏”、中间“邮件列表”、右侧“详情视图”。
     - **混合数据源**：左侧侧边栏在私有模式下由 `/api/private-emails/addresses` 驱动，在公共模式下由本地 `localStorage` 历史记录驱动，均包含创建时间戳。
     - **自适应切换**：支持点击地址即时切换数据流，无需重新加载组件。
-- **历史记录智能切换**：修复第三方域名（如 oakon.com）下架导致的切换失败，活跃地址在 UI 中直接支持点击修改。
+- **历史记录智能切换**：修复第三方域名下架导致的切换失败，活跃地址在 UI 中直接支持点击修改。
 
 ## 11. TikTok Ads 自动化注册实现 (TikTok Ads Automation)
 ### 11.1 前端交互与 API 设计
@@ -323,6 +328,6 @@
       - **注册后登录检测**：提交注册后，脚本会自动等待并检测页面跳转。若重定向至登录页，则自动使用新注册的账号执行登录。
       - **状态验证**：验证是否成功进入 `dashboard` 或 `business` 页面。
       - **全量同步**：在确认登录状态后，调用 `page.cookies()` 提取全量 Cookie。
-      - **数据回写**：通过 `PUT /api/profiles/:id` 接口，将 `account_email`、`account_password`、`account_cookies` 及 `account_status` (Active) 同步回 Cloudflare D1 数据库。
+      - **数据回写**：通过 `PUT /api/profiles/:id` 接口，将 `account_email`、`account_password`、`account_cookies` 及 `account_status` (Active) 同步回云端后端数据库。
     - 点击提交注册按钮（支持多种选择器：`button[type="submit"]`, `.ac-signup-submit-btn` 等）。
     - 自动截图保存至 `server/logs/screenshots` 目录。

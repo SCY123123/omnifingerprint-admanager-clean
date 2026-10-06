@@ -2,7 +2,6 @@
  * API 转发层 (Cloudflare Pages Functions)
  * 说明：API 部署在自建后端服务器（https://your-backend.example.com/api/*），
  * 前端保持 Cloudflare Pages 不变，本文件把 /api/* 请求原样转发到新后端。
- * 原完整 API 实现已备份到 functions/_backup_api/（Pages 会忽略 _ 开头的目录）。
  *
  * 🆕 临时邮箱网关是例外：/api/mailtm-proxy、/api/mailgw-proxy 在宝塔后端上并不存在
  *    （迁移时没跟着迁，转发过去只会 404），这里直接在边缘节点转发到公共邮箱 API ——

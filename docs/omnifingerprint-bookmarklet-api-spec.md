@@ -1,7 +1,8 @@
-# AdSpy Bookmarklet API 功能技术文档
+# OmniFingerprint Bookmarklet API 功能技术文档
 
-> 来源：`限额查看代码.txt` 解压后的书签代码（`限额解压.js`，188KB）
 > 功能：Facebook 广告账户管理一站式工具，通过浏览器上下文直接调用 Facebook 内部 API
+>
+> 商标声明：本文档中出现的 Facebook 等名称均为其各自所有者的商标，此处仅用于标识与兼容性说明，不代表任何关联、赞助或背书。
 
 ---
 
